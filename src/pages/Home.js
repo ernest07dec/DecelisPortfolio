@@ -21,6 +21,7 @@ import "aos/dist/aos.css";
 
 export const Home = () => {
   const [description, setDescription] = useState("");
+  const [title, setTitle] = useState("");
   const [scrollTop, setScrollTop] = useState(0);
   useEffect(() => {
     AOS.init();
@@ -37,7 +38,9 @@ export const Home = () => {
     };
   }, []);
   const displayDescription = () =>
-    setDescription("HELLOHELLOHELLOHELLOHELLOHELLO");
+    setDescription(
+      "HELLO HELLOH ELLOHELLO HELLOHELLOHELL OHELLOHELLO HELLOHELLOHELL OHELLOHELLOHELLOHE  LLOHELLOHELLOHEL LOHELLOHELLOH ELLOHELLOHELLOHELLOHEL LOHELLOHELLOH ELLOHELLO"
+    );
   const clearDescription = () => setDescription("");
   return (
     <div>
@@ -107,27 +110,27 @@ export const Home = () => {
             My Recent Projects
           </h2>
           <div className="">
-            <div className="-mx-4 grid h-full overflow-hidden grid-cols-3 border-2 border-solid border-indigo-700 rounded-3xl">
+            <div className="mx-4 grid h-full overflow-auto grid-cols-3 border-2 border-solid border-indigo-700 rounded-3xl">
               <div
-                className="text-white flex flex-col justify-center items-center rounded-3xl col-span-2 bg-no-repeat bg-cover text-7xl"
+                className="text-white grid w-full items-center rounded-l-3xl col-span-2 bg-no-repeat bg-cover"
                 style={{
                   backgroundImage: `url(${NewsGrid})`,
                 }}
               >
                 <div
-                  class="w-full h-full grid-cols-1 hover:backdrop-blur-lg"
+                  class="h-full w-full grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
                   onMouseEnter={displayDescription}
                   onMouseLeave={clearDescription}
                 >
-                  <h1 class="mt-5 text-white font-semibold drop-shadow-lg">
-                    WELCOME TO
+                  <h1 class="mt-10 text-white font-semibold text-5xl pb-5">
+                    CarGo Final
                   </h1>
-                  <p class="text-yellow-300">KINDACODE.COM</p>
-                  <p class="text-yellow-300 text-xl truncate">{description}</p>
+                  <p class="text-gray-300">{description}</p>
+                  <p class="text-gray-300 mb-10">KINDACODE.COM</p>
                 </div>
               </div>
               <div className="flex flex-col justify-between items-left px-5 py-5 text-xl text-center font-bold">
-                <h3 className="border-b border-solid py-6">CARGO FINAL</h3>
+                <h3 className="border-b border-solid py-6 ">CARGO FINAL</h3>
                 <h3 className="border-b border-solid py-6">NUTRICHEFHUB</h3>
                 <h3 className="border-b border-solid py-6">CINEZONE V2.0</h3>
                 <h3 className="border-b border-solid py-6">KODEJOBS</h3>
@@ -316,9 +319,22 @@ export const Home = () => {
           <h2 className="mb-10 text-3xl font-bold text-dark sm:text-4xl md:text-[42px]">
             My StartUp Projects
           </h2>
-          <div className="-mx-4 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-5">
-            <div className="bg-black text-white h-72 flex flex-col justify-center items-center rounded-3xl">
-              Test
+          <div className="mx-4 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-5">
+            <div
+              className="text-white grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-cover"
+              style={{
+                backgroundImage: `url(${NewsGrid})`,
+              }}
+            >
+              <div
+                class="h-full grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
+                onMouseEnter={displayDescription}
+                onMouseLeave={clearDescription}
+              >
+                <h1 class="text-white font-semibold text-5xl">CarGo Final</h1>
+                <p class="text-gray-300">{description}</p>
+                <p class="text-gray-300">KINDACODE.COM</p>
+              </div>
             </div>
             <div className="bg-black text-white h-72 flex flex-col justify-center items-center rounded-3xl">
               Test
