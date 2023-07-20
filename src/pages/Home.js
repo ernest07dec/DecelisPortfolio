@@ -1,5 +1,12 @@
 import Hero from "../assets/hero.jpg";
+import CargoPF from "../assets/cargopf.png";
+import Nutrichef from "../assets/nutrichef.png";
+import Cinezone2 from "../assets/cinezone2pf.png";
+import Kodejobs from "../assets/kodejobs.png";
+import Cinezone1 from "../assets/cinezonepf.png";
+import Cargo from "../assets/cargo1pf.png";
 import NewsGrid from "../assets/newsgrid.png";
+
 import Bootstrap from "../assets/bootstrap.png";
 import Express from "../assets/express.png";
 import Github from "../assets/github.png";
@@ -20,8 +27,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export const Home = () => {
-  const [description, setDescription] = useState("");
+  const [projIMG, setprojIMG] = useState(CargoPF);
   const [title, setTitle] = useState("");
+  const [display, setDisplay] = useState("CarGo Final");
+  const [description, setDescription] = useState("");
+  const [projLink, setProjLink] = useState("");
   const [scrollTop, setScrollTop] = useState(0);
   useEffect(() => {
     AOS.init();
@@ -37,11 +47,62 @@ export const Home = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const displayDescription = () =>
-    setDescription(
-      "HELLO HELLOH ELLOHELLO HELLOHELLOHELL OHELLOHELLO HELLOHELLOHELL OHELLOHELLOHELLOHE  LLOHELLOHELLOHEL LOHELLOHELLOH ELLOHELLOHELLOHELLOHEL LOHELLOHELLOH ELLOHELLO"
-    );
-  const clearDescription = () => setDescription("");
+  const changeDescription = (e) => {
+    switch (e) {
+      case "cargofinal":
+        setDisplay("CarGo Final");
+        setprojIMG(CargoPF);
+        break;
+      case "nutrichef":
+        setDisplay("NutriChefHub");
+        setprojIMG(Nutrichef);
+        break;
+      case "cinezone2":
+        setDisplay("CineZone V2.0");
+        setprojIMG(Cinezone2);
+        break;
+      case "kodejobs":
+        setDisplay("KodeJobs");
+        setprojIMG(Kodejobs);
+        break;
+      case "cinezone1":
+        setDisplay("CineZone V1.0");
+        setprojIMG(Cinezone1);
+        break;
+      case "cargo1":
+        setDisplay("CarGo");
+        setprojIMG(Cargo);
+        break;
+      case "newsgrid":
+        setDisplay("NewsGrid");
+        setprojIMG(NewsGrid);
+        break;
+    }
+  };
+  const displayDescription = (e) => {
+    switch (display) {
+      case "CarGo Final":
+        setTitle("CarGo Final");
+        setDescription(
+          "So if you're looking for a reliable, affordable, and convenient car rental company for your next trip, look no further than us. Our commitment to customer satisfaction, coupled with our wide range of vehicles and flexible rental options, makes us the ideal choice for all your transportation needs."
+        );
+
+        setProjLink("capstone-cargo.vercel.app");
+        break;
+
+      default:
+        setTitle("TITLE");
+        setDescription("DESCRIPTION DESCRIPTION");
+        setProjLink("linklinklink");
+        break;
+    }
+  };
+
+  const clearDescription = () => {
+    setTitle("");
+    setDescription("");
+    setProjLink("");
+  };
   return (
     <div>
       <div className="text-center text-gray-200">
@@ -115,49 +176,68 @@ export const Home = () => {
           </h2>
           <div>
             <div
-              className="grid h-full overflow-hidden w-full lg:grid-cols-3 grid-cols-1 sm:grid-cols-1 md:grid-cols-3 border-2 border-solid border-indigo-700 rounded-3xl"
+              className="grid h-full overflow-hidden w-full lg:grid-cols-3 grid-cols-1 sm:grid-cols-1 md:grid-cols-3 border-2 border-solid border-indigo-700 rounded-3xl p-5"
               data-aos="fade-left"
               data-aos-offset="300"
               data-aos-duration="900"
             >
               <div
-                className="text-white grid overflow-hidden w-full items-center col-span-2 bg-no-repeat bg-cover h-[500px] md:h-full"
+                className="text-white  grid overflow-hidden rounded-3xl w-full items-center col-span-2 brightness-90 bg-no-repeat bg-center bg-cover h-[500px] md:h-full"
                 style={{
-                  backgroundImage: `url(${NewsGrid})`,
+                  backgroundImage: `url(${projIMG})`,
                 }}
+                onMouseEnter={displayDescription}
+                onMouseLeave={clearDescription}
               >
-                <div
-                  className="h-full w-full overflow-hidden rounded-3xl grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
-                  onMouseEnter={displayDescription}
-                  onMouseLeave={clearDescription}
-                >
+                <div className="h-full w-full overflow-hidden rounded-3xl grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:backdrop-brightness-50 hover:justify-between ease-in duration-300">
                   <h1 className="mt-10 text-white font-semibold text-5xl pb-5">
-                    CarGo Final
+                    {title}
                   </h1>
                   <p className="text-gray-300">{description}</p>
-                  <p className="text-gray-300 mb-10">KINDACODE.COM</p>
+                  <p className="text-gray-300 mb-10">{projLink}</p>
                 </div>
               </div>
-              <div className="md:block flex flex-wrap items-center justify-center gap-5 md:gap-0 px-5 py-5 text-xl text-center font-bold">
-                <h3 className="border-b border-solid py-6  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out">
+              <div className="md:block flex flex-wrap items-center justify-center gap-5 md:gap-0 px-5 py-5 text-xl text-center font-bold hover:cursor-pointer">
+                <h3
+                  className="border-b border-solid py-6  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out hover:cursor-pointer"
+                  onClick={(e) => changeDescription("cargofinal")}
+                >
                   CARGO FINAL
                 </h3>
-                <h3 className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out">
+                <h3
+                  className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out hover:cursor-pointer"
+                  onClick={(e) => changeDescription("nutrichef")}
+                >
                   NUTRICHEFHUB
                 </h3>
-                <h3 className="border-b border-solid py-6  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out">
+                <h3
+                  className="border-b border-solid py-6  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out hover:cursor-pointer"
+                  onClick={(e) => changeDescription("cinezone2")}
+                >
                   CINEZONE V2.0
                 </h3>
-                <h3 className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out">
+                <h3
+                  className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out hover:cursor-pointer"
+                  onClick={(e) => changeDescription("kodejobs")}
+                >
                   KODEJOBS
                 </h3>
-                <h3 className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out">
+                <h3
+                  className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out hover:cursor-pointer"
+                  onClick={(e) => changeDescription("cinezone1")}
+                >
                   CINEZONE V1.0
                 </h3>
-                <h3 className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out">
+                <h3
+                  className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out hover:cursor-pointer"
+                  onClick={(e) => changeDescription("cargo1")}
+                >
                   CARGO
                 </h3>
-                <h3 className="py-6 border-b border-solid py-6 md:border-none  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out">
+                <h3
+                  className="py-6 border-b border-solid py-6 md:border-none  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out hover:cursor-pointer"
+                  onClick={(e) => changeDescription("newsgrid")}
+                >
                   NEWSGRID
                 </h3>
               </div>
