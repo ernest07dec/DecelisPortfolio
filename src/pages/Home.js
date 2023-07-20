@@ -113,39 +113,51 @@ export const Home = () => {
           >
             My Recent Projects
           </h2>
-          <div className="">
+          <div>
             <div
-              className="grid h-full  w-full lg:grid-cols-3 grid-cols-1 sm:grid-cols-1 md:grid-cols-3 border-2 border-solid border-indigo-700 rounded-3xl"
+              className="grid h-full overflow-hidden w-full lg:grid-cols-3 grid-cols-1 sm:grid-cols-1 md:grid-cols-3 border-2 border-solid border-indigo-700 rounded-3xl"
               data-aos="fade-left"
               data-aos-offset="300"
               data-aos-duration="900"
             >
               <div
-                className="text-white grid w-full items-center col-span-2 bg-no-repeat bg-cover h-[500px] md:h-full"
+                className="text-white grid overflow-hidden w-full items-center col-span-2 bg-no-repeat bg-cover h-[500px] md:h-full"
                 style={{
                   backgroundImage: `url(${NewsGrid})`,
                 }}
               >
                 <div
-                  class="h-full w-full grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
+                  className="h-full w-full overflow-hidden rounded-3xl grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
                   onMouseEnter={displayDescription}
                   onMouseLeave={clearDescription}
                 >
-                  <h1 class="mt-10 text-white font-semibold text-5xl pb-5">
+                  <h1 className="mt-10 text-white font-semibold text-5xl pb-5">
                     CarGo Final
                   </h1>
-                  <p class="text-gray-300">{description}</p>
-                  <p class="text-gray-300 mb-10">KINDACODE.COM</p>
+                  <p className="text-gray-300">{description}</p>
+                  <p className="text-gray-300 mb-10">KINDACODE.COM</p>
                 </div>
               </div>
               <div className="md:block flex flex-wrap items-center justify-center gap-5 md:gap-0 px-5 py-5 text-xl text-center font-bold">
-                <h3 className="border-b border-solid py-6 ">CARGO FINAL</h3>
-                <h3 className="border-b border-solid py-6">NUTRICHEFHUB</h3>
-                <h3 className="border-b border-solid py-6">CINEZONE V2.0</h3>
-                <h3 className="border-b border-solid py-6">KODEJOBS</h3>
-                <h3 className="border-b border-solid py-6">CINEZONE V1.0</h3>
-                <h3 className="border-b border-solid py-6">CARGO</h3>
-                <h3 className="py-6 border-b border-solid py-6 md:border-none">
+                <h3 className="border-b border-solid py-6  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out">
+                  CARGO FINAL
+                </h3>
+                <h3 className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out">
+                  NUTRICHEFHUB
+                </h3>
+                <h3 className="border-b border-solid py-6  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out">
+                  CINEZONE V2.0
+                </h3>
+                <h3 className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out">
+                  KODEJOBS
+                </h3>
+                <h3 className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out">
+                  CINEZONE V1.0
+                </h3>
+                <h3 className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out">
+                  CARGO
+                </h3>
+                <h3 className="py-6 border-b border-solid py-6 md:border-none  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out">
                   NEWSGRID
                 </h3>
               </div>
@@ -343,13 +355,15 @@ export const Home = () => {
               }}
             >
               <div
-                class="h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
+                className="h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
                 onMouseEnter={displayDescription}
                 onMouseLeave={clearDescription}
               >
-                <h1 class="text-white font-semibold text-5xl">CarGo Final</h1>
-                <p class="text-gray-300">{description}</p>
-                <p class="text-gray-300">KINDACODE.COM</p>
+                <h1 className="text-white font-semibold text-5xl">
+                  CarGo Final
+                </h1>
+                <p className="text-gray-300">{description}</p>
+                <p className="text-gray-300">KINDACODE.COM</p>
               </div>
             </div>
             <div
@@ -359,13 +373,15 @@ export const Home = () => {
               }}
             >
               <div
-                class="h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
+                className="h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
                 onMouseEnter={displayDescription}
                 onMouseLeave={clearDescription}
               >
-                <h1 class="text-white font-semibold text-5xl">CarGo Final</h1>
-                <p class="text-gray-300">{description}</p>
-                <p class="text-gray-300">KINDACODE.COM</p>
+                <h1 className="text-white font-semibold text-5xl">
+                  CarGo Final
+                </h1>
+                <p className="text-gray-300">{description}</p>
+                <p className="text-gray-300">KINDACODE.COM</p>
               </div>
             </div>
             <div
@@ -375,13 +391,15 @@ export const Home = () => {
               }}
             >
               <div
-                class="h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
+                className="h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
                 onMouseEnter={displayDescription}
                 onMouseLeave={clearDescription}
               >
-                <h1 class="text-white font-semibold text-5xl">CarGo Final</h1>
-                <p class="text-gray-300">{description}</p>
-                <p class="text-gray-300">KINDACODE.COM</p>
+                <h1 className="text-white font-semibold text-5xl">
+                  CarGo Final
+                </h1>
+                <p className="text-gray-300">{description}</p>
+                <p className="text-gray-300">KINDACODE.COM</p>
               </div>
             </div>
             <div
@@ -391,13 +409,15 @@ export const Home = () => {
               }}
             >
               <div
-                class="h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
+                className="h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
                 onMouseEnter={displayDescription}
                 onMouseLeave={clearDescription}
               >
-                <h1 class="text-white font-semibold text-5xl">CarGo Final</h1>
-                <p class="text-gray-300">{description}</p>
-                <p class="text-gray-300">KINDACODE.COM</p>
+                <h1 className="text-white font-semibold text-5xl">
+                  CarGo Final
+                </h1>
+                <p className="text-gray-300">{description}</p>
+                <p className="text-gray-300">KINDACODE.COM</p>
               </div>
             </div>
             <div
@@ -407,13 +427,15 @@ export const Home = () => {
               }}
             >
               <div
-                class="h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
+                className="h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
                 onMouseEnter={displayDescription}
                 onMouseLeave={clearDescription}
               >
-                <h1 class="text-white font-semibold text-5xl">CarGo Final</h1>
-                <p class="text-gray-300">{description}</p>
-                <p class="text-gray-300">KINDACODE.COM</p>
+                <h1 className="text-white font-semibold text-5xl">
+                  CarGo Final
+                </h1>
+                <p className="text-gray-300">{description}</p>
+                <p className="text-gray-300">KINDACODE.COM</p>
               </div>
             </div>
             <div
@@ -423,13 +445,15 @@ export const Home = () => {
               }}
             >
               <div
-                class="h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
+                className="h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
                 onMouseEnter={displayDescription}
                 onMouseLeave={clearDescription}
               >
-                <h1 class="text-white font-semibold text-5xl">CarGo Final</h1>
-                <p class="text-gray-300">{description}</p>
-                <p class="text-gray-300">KINDACODE.COM</p>
+                <h1 className="text-white font-semibold text-5xl">
+                  CarGo Final
+                </h1>
+                <p className="text-gray-300">{description}</p>
+                <p className="text-gray-300">KINDACODE.COM</p>
               </div>
             </div>
           </div>
