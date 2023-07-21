@@ -1,7 +1,7 @@
 import { NavLink, Link } from "react-router-dom";
 import React, { useState } from "react";
 import { FaDownload } from "react-icons/fa";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export const Header = () => {
   const [scrollTop, setScrollTop] = useState(0);
