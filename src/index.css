@@ -8,6 +8,11 @@
 
 @media only screen and (max-width: 375px) {
   html {
-    font-size: 65%;
+    font-size: 60%;
+  }
+}
+@media (min-width: 376px) and (max-width: 680px) {
+  html {
+    font-size: 75%;
   }
 }

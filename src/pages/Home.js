@@ -1,4 +1,4 @@
-import Hero from "../assets/hero.jpg";
+import Hero from "../assets/hero2.mp4";
 import CargoPF from "../assets/cargopf.png";
 import Nutrichef from "../assets/nutrichef.png";
 import Cinezone2 from "../assets/cinezone2pf.png";
@@ -33,6 +33,7 @@ export const Home = () => {
   const [description, setDescription] = useState("");
   const [projLink, setProjLink] = useState("");
   const [scrollTop, setScrollTop] = useState(0);
+  // console.log(window.location.path);
   useEffect(() => {
     AOS.init();
   }, []);
@@ -151,10 +152,18 @@ export const Home = () => {
                 </button>
               </div>
             </div>
-            <img
+            {/* <img
               className="h-screen overlow-hidden w-full object-cover"
               src={Hero}
-            ></img>
+            ></img> */}
+            <video
+              className="VideoTag h-screen overlow-hidden w-full object-cover"
+              autoPlay
+              loop
+              muted
+            >
+              <source src={Hero} type="video/mp4" />
+            </video>
           </div>
         </section>
         <div className="flex hidden md:inline-block justify-center z-40 relative bottom-28 pt-10">
@@ -182,7 +191,7 @@ export const Home = () => {
               data-aos-duration="900"
             >
               <div
-                className="text-white  grid overflow-hidden rounded-3xl w-full items-center col-span-2 brightness-90 bg-no-repeat bg-center bg-cover h-[500px] md:h-full"
+                className="text-white  grid overflow-hidden rounded-3xl w-full items-center col-span-2 brightness-90 bg-no-repeat bg-cover h-[400px] md:h-full"
                 style={{
                   backgroundImage: `url(${projIMG})`,
                 }}
@@ -193,49 +202,51 @@ export const Home = () => {
                   <h1 className="mt-10 text-white font-semibold text-5xl pb-5">
                     {title}
                   </h1>
-                  <p className="text-gray-300">{description}</p>
-                  <p className="text-gray-300 mb-10">{projLink}</p>
+                  <p className="text-lg">{description}</p>
+                  <p className="mb-10 hover:cursor-pointer hover:underline">
+                    {projLink}
+                  </p>
                 </div>
               </div>
               <div className="md:block flex flex-wrap items-center justify-center gap-5 md:gap-0 px-5 py-5 text-xl text-center font-bold hover:cursor-pointer">
                 <h3
-                  className="border-b border-solid py-6  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out hover:cursor-pointer"
+                  className="border-b border-solid py-6  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
                   onClick={(e) => changeDescription("cargofinal")}
                 >
                   CARGO FINAL
                 </h3>
                 <h3
-                  className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out hover:cursor-pointer"
+                  className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
                   onClick={(e) => changeDescription("nutrichef")}
                 >
                   NUTRICHEFHUB
                 </h3>
                 <h3
-                  className="border-b border-solid py-6  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out hover:cursor-pointer"
+                  className="border-b border-solid py-6  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
                   onClick={(e) => changeDescription("cinezone2")}
                 >
                   CINEZONE V2.0
                 </h3>
                 <h3
-                  className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out hover:cursor-pointer"
+                  className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
                   onClick={(e) => changeDescription("kodejobs")}
                 >
                   KODEJOBS
                 </h3>
                 <h3
-                  className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out hover:cursor-pointer"
+                  className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
                   onClick={(e) => changeDescription("cinezone1")}
                 >
                   CINEZONE V1.0
                 </h3>
                 <h3
-                  className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out hover:cursor-pointer"
+                  className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
                   onClick={(e) => changeDescription("cargo1")}
                 >
                   CARGO
                 </h3>
                 <h3
-                  className="py-6 border-b border-solid py-6 md:border-none  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold ease-out hover:cursor-pointer"
+                  className="py-6 border-b border-solid py-6 md:border-none  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
                   onClick={(e) => changeDescription("newsgrid")}
                 >
                   NEWSGRID
