@@ -207,14 +207,17 @@ export const Home = () => {
               data-aos-duration="900"
             >
               <div
-                className="  grid overflow-hidden rounded-3xl w-full items-center col-span-2 brightness-90 bg-no-repeat bg-cover h-[400px] md:h-full"
-                style={{
-                  backgroundImage: `url(${projIMG})`,
-                }}
+                className="grid overflow-hidden rounded-3xl w-full items-center col-span-2 brightness-90 bg-no-repeat bg-cover object-contain min-w-screen-md h-[400px] md:h-full"
+                style={
+                  {
+                    // backgroundImage: `url(${projIMG})`,
+                  }
+                }
                 onMouseEnter={displayDescription}
                 onMouseLeave={clearDescription}
               >
-                <div className="h-full w-full overflow-hidden rounded-3xl grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:backdrop-brightness-50 hover:justify-between ease-in duration-300">
+                <img className="absolute h-full min-w-[550px]" src={projIMG} />
+                <div className="h-full w-full overflow-hidden rounded-3xl grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:backdrop-brightness-50 hover:justify-between ease-in duration-300 z-40">
                   <h1 className="mt-10  font-semibold text-5xl pb-5">
                     {title}
                   </h1>
@@ -540,8 +543,7 @@ export const Home = () => {
               </div>
               <div class="relative z-0 w-full mb-6 group">
                 <input
-                  type="tel"
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  type="text"
                   name="floating_phone"
                   id="floating_phone"
                   class=" block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-indigo-500 focus:outline-none focus:ring-0 focus:border-indigo-500 peer"
