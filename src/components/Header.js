@@ -27,7 +27,7 @@ export const Header = () => {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link to="/" className="flex items-center" onClick={handleNav}>
             <span className="self-center text-3xl font-semibold whitespace-nowrap">
-              Ernest F. J.D.
+              Ernest
             </span>
           </Link>
           <div className="flex md:order-2">
@@ -131,7 +131,7 @@ export const Header = () => {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link to="/" className="flex items-center" onClick={handleNav}>
             <span className="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">
-              Ernest F. J.D.
+              Ernest
             </span>
           </Link>
           <div className="flex md:order-2">

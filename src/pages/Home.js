@@ -21,10 +21,10 @@ import css from "../assets/css.png";
 import javascript from "../assets/javascript.png";
 import About1 from "../assets/about1.jpg";
 import About2 from "../assets/about2.jpg";
-import { FaDownload, FaPhone, FaFolder } from "react-icons/fa";
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { FaDownload, FaPhone, FaFolder, FaUser } from "react-icons/fa";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -35,9 +35,9 @@ export const Home = () => {
   const [display, setDisplay] = useState("CarGo Final");
   const [description, setDescription] = useState("");
   const [projLink, setProjLink] = useState("");
+  const [animation, setAnimation] = useState("flip-left");
   const [scrollTop, setScrollTop] = useState(0);
   // console.log(window.location.path);
-
   useEffect(() => {
     AOS.init();
   }, []);
@@ -53,6 +53,8 @@ export const Home = () => {
     };
   }, []);
   const projectRef = useRef(null);
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
   const executeScroll = (ref) => {
     window.scrollTo({
       top: ref.offsetTop - 150,
@@ -150,13 +152,15 @@ export const Home = () => {
                   <FaFolder className="ml-5 mt-1 text-lg" />
                 </button>
                 <button
+                  onClick={() => executeScroll(aboutRef.current)}
                   type="button"
                   className=" justify-center flex ring-2 ring-blue-200 hover:ring-4 hover:ring-blue-300 font-medium text-sm px-4 py-2 text-center mr-3 md:mr-0 text-xl z-40"
                 >
                   About
-                  <FaDownload className="ml-5 mt-1 text-lg" />
+                  <FaUser className="ml-5 mt-1 text-lg" />
                 </button>
                 <button
+                  onClick={() => executeScroll(contactRef.current)}
                   type="button"
                   className=" flex justify-center ring-2 ring-blue-200 hover:ring-4 hover:ring-blue-300 font-medium text-sm px-4 py-2 text-center mr-3 md:mr-0 text-xl z-40"
                 >
@@ -216,7 +220,13 @@ export const Home = () => {
                 onMouseEnter={displayDescription}
                 onMouseLeave={clearDescription}
               >
-                <img className="absolute w-full rounded-3xl" src={projIMG} />
+                <img
+                  className="absolute w-full rounded-3xl"
+                  src={projIMG}
+                  data-aos={animation}
+                  data-aos-offset="300"
+                  data-aos-duration="900"
+                />
                 <div className="h-full w-full overflow-hidden rounded-3xl grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:backdrop-brightness-50 hover:justify-between ease-in duration-300 z-40">
                   <h1 className="mt-10  font-semibold text-5xl pb-5">
                     {title}
@@ -227,10 +237,24 @@ export const Home = () => {
                   </p>
                 </div>
               </div>
-              <div className="md:block flex flex-wrap items-center justify-center gap-5 md:gap-0 px-5 py-5 text-xl text-center font-bold hover:cursor-pointer">
+              <div
+                className="md:block flex flex-wrap items-center justify-center gap-5 md:gap-0 px-5 py-5 text-xl text-center font-bold hover:cursor-pointer"
+                onClick={(e) => {
+                  e.target.parentElement.previousElementSibling.classList.add(
+                    "motion-safe:animate-bounce"
+                  );
+                  setTimeout(() => {
+                    e.target.parentElement.previousElementSibling.classList.remove(
+                      "motion-safe:animate-bounce"
+                    );
+                  }, 500);
+                }}
+              >
                 <h3
                   className="border-b border-solid py-4  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
-                  onClick={(e) => changeDescription("cargofinal")}
+                  onClick={(e) => {
+                    changeDescription("cargofinal");
+                  }}
                 >
                   CARGO FINAL
                 </h3>
@@ -387,15 +411,17 @@ export const Home = () => {
             </div>
           </div>
           <div className="py-5 px-5 flex justify-end">
-            <button
-              type="button"
-              className=" flex ring-2 ring-blue-200 hover:ring-4 hover:ring-blue-300 font-medium text-sm px-4 py-2 text-center mt-7 md:mr-0 text-lg"
-            >
-              See More
-            </button>
+            <Link to="/projects">
+              <button
+                type="button"
+                className=" flex ring-2 ring-blue-200 hover:ring-4 hover:ring-blue-300 font-medium text-sm px-4 py-2 text-center mt-7 md:mr-0 text-lg"
+              >
+                See More
+              </button>
+            </Link>
           </div>
         </section>
-        <section>
+        <section ref={aboutRef}>
           <div className="mt-20 pb-8 max-w-screen-xl mx-auto px-5">
             <div className="grid grid-cols-3 h-[400px] gap-5">
               <div
@@ -426,12 +452,14 @@ export const Home = () => {
                   ever-evolving landscape."
                 </p>
                 <div className="flex justify-end">
-                  <button
-                    type="button"
-                    className=" flex ring-2 ring-blue-200 text-lg hover:ring-4 hover:ring-blue-300 font-medium text-sm px-4 py-2 text-center mt-4"
-                  >
-                    See More
-                  </button>
+                  <Link to="/about">
+                    <button
+                      type="button"
+                      className=" flex ring-2 ring-blue-200 text-lg hover:ring-4 hover:ring-blue-300 font-medium text-sm px-4 py-2 text-center mt-4"
+                    >
+                      See More
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -489,7 +517,10 @@ export const Home = () => {
             </div>
           </div>
         </section>
-        <section className="mt-20 pb-8 max-w-screen-xl px-10 mx-auto">
+        <section
+          ref={contactRef}
+          className="mt-20 pb-8 max-w-screen-xl px-10 mx-auto"
+        >
           <form className="max-w-screen-md mx-auto flex flex-col justify-center bg-gray-900 p-10 rounded-2xl">
             <h2 className="text-5xl mb-10">Contact Form</h2>
             <div className="grid md:grid-cols-3 grid-cols-2 gap-6">
@@ -570,7 +601,7 @@ export const Home = () => {
                   htmlFor="floating_company"
                   className="peer-focus:font-medium absolute text-sm text-gray-200 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 left-0 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-indigo-500 peer-focus:dark:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
-                  Company (Ex. Google)
+                  Company
                 </label>
               </div>
             </div>
