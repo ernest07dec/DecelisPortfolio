@@ -133,12 +133,12 @@ export const Home = () => {
                 Full-stack web developer
               </h1>
               <p className="px-20 pt-16 md:text-2xl">
-                I am living in Cavite, Philippines. I enjoy building and
-                debugging web development projects.
+                Based from Cavite, Philippines. I enjoy creating and debugging
+                exciting web projects.
               </p>
               <p className="px-20 md:text-2xl">
-                View my great Projects, All about myself, and Come connect with
-                me.
+                Check out the projects I've worked on, know more about me and
+                connect.
               </p>
               <div className="px-24 lg:mt-10 mt-20 text-2xl flex flex-col md:flex-row gap-5">
                 <button
@@ -201,13 +201,13 @@ export const Home = () => {
           </h2>
           <div>
             <div
-              className="grid h-full overflow-hidden w-full lg:grid-cols-3 grid-cols-1 sm:grid-cols-1 md:grid-cols-3 border-2 border-solid border-indigo-900 rounded-3xl p-5"
+              className="grid h-full overflow-hidden w-full lg:grid-cols-3 grid-cols-1 sm:grid-cols-1 md:grid-cols-3 p-5 border rounded-3xl border-indigo-900"
               data-aos="fade-left"
               data-aos-offset="300"
               data-aos-duration="900"
             >
               <div
-                className="grid overflow-hidden rounded-3xl w-full items-center col-span-2 brightness-90 bg-no-repeat bg-cover object-contain min-w-screen-md h-[400px] md:h-full"
+                className="grid overflow-hidden rounded-3xl w-full items-center col-span-2 brightness-90 bg-no-repeat bg-cover object-contain min-w-screen-md h-[380px] md:h-full"
                 style={
                   {
                     // backgroundImage: `url(${projIMG})`,
@@ -216,7 +216,7 @@ export const Home = () => {
                 onMouseEnter={displayDescription}
                 onMouseLeave={clearDescription}
               >
-                <img className="absolute h-full min-w-[550px]" src={projIMG} />
+                <img className="absolute w-full rounded-3xl" src={projIMG} />
                 <div className="h-full w-full overflow-hidden rounded-3xl grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:backdrop-brightness-50 hover:justify-between ease-in duration-300 z-40">
                   <h1 className="mt-10  font-semibold text-5xl pb-5">
                     {title}
@@ -229,43 +229,43 @@ export const Home = () => {
               </div>
               <div className="md:block flex flex-wrap items-center justify-center gap-5 md:gap-0 px-5 py-5 text-xl text-center font-bold hover:cursor-pointer">
                 <h3
-                  className="border-b border-solid py-6  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
+                  className="border-b border-solid py-4  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
                   onClick={(e) => changeDescription("cargofinal")}
                 >
                   CARGO FINAL
                 </h3>
                 <h3
-                  className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
+                  className="border-b border-solid py-4 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
                   onClick={(e) => changeDescription("nutrichef")}
                 >
                   NUTRICHEFHUB
                 </h3>
                 <h3
-                  className="border-b border-solid py-6  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
+                  className="border-b border-solid py-4  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
                   onClick={(e) => changeDescription("cinezone2")}
                 >
                   CINEZONE V2.0
                 </h3>
                 <h3
-                  className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
+                  className="border-b border-solid py-4 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
                   onClick={(e) => changeDescription("kodejobs")}
                 >
                   KODEJOBS
                 </h3>
                 <h3
-                  className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
+                  className="border-b border-solid py-4 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
                   onClick={(e) => changeDescription("cinezone1")}
                 >
                   CINEZONE V1.0
                 </h3>
                 <h3
-                  className="border-b border-solid py-6 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
+                  className="border-b border-solid py-4 hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
                   onClick={(e) => changeDescription("cargo1")}
                 >
                   CARGO
                 </h3>
                 <h3
-                  className="py-6 border-b border-solid py-6 md:border-none  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
+                  className="border-b border-solid py-4 md:border-none  hover:saturate-200 hover:backdrop-brightness-150 hover:font-extrabold transition ease-out hover:cursor-pointer"
                   onClick={(e) => changeDescription("newsgrid")}
                 >
                   NEWSGRID
@@ -492,83 +492,83 @@ export const Home = () => {
         <section className="mt-20 pb-8 max-w-screen-xl px-10 mx-auto">
           <form className="max-w-screen-md mx-auto flex flex-col justify-center bg-gray-900 p-10 rounded-2xl">
             <h2 className="text-5xl mb-10">Contact Form</h2>
-            <div class="grid md:grid-cols-3 grid-cols-2 gap-6">
-              <div class="relative z-0 w-full mb-6 group">
+            <div className="grid md:grid-cols-3 grid-cols-2 gap-6">
+              <div className="relative z-0 w-full mb-6 group">
                 <input
                   type="email"
                   name="floating_email"
                   id="floating_email"
-                  class="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-indigo-500 peer"
+                  className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-indigo-500 peer"
                   placeholder=" "
                   required
                 />
                 <label
-                  for="floating_email"
-                  class="peer-focus:font-medium absolute text-sm text-gray-200 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 left-0 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-indigo-500 peer-focus:dark:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  htmlFor="floating_email"
+                  className="peer-focus:font-medium absolute text-sm text-gray-200 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 left-0 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-indigo-500 peer-focus:dark:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Email address
                 </label>
               </div>
-              <div class="relative z-0 w-full mb-6 group">
+              <div className="relative z-0 w-full mb-6 group">
                 <input
                   type="text"
                   name="floating_first_name"
                   id="floating_first_name"
-                  class="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-indigo-500 focus:outline-none focus:ring-0 focus:border-indigo-500 peer"
+                  className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-indigo-500 focus:outline-none focus:ring-0 focus:border-indigo-500 peer"
                   placeholder=" "
                   required
                 />
                 <label
-                  for="floating_first_name"
-                  class="peer-focus:font-medium absolute text-sm text-gray-200 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 left-0 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-indigo-500 peer-focus:dark:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  htmlFor="floating_first_name"
+                  className="peer-focus:font-medium absolute text-sm text-gray-200 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 left-0 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-indigo-500 peer-focus:dark:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   First name
                 </label>
               </div>
-              <div class="relative z-0 w-full mb-6 group">
+              <div className="relative z-0 w-full mb-6 group">
                 <input
                   type="text"
                   name="floating_last_name"
                   id="floating_last_name"
-                  class="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-indigo-500 focus:outline-none focus:ring-0 focus:border-indigo-500 peer"
+                  className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-indigo-500 focus:outline-none focus:ring-0 focus:border-indigo-500 peer"
                   placeholder=" "
                   required
                 />
                 <label
-                  for="floating_last_name"
-                  class="peer-focus:font-medium absolute text-sm text-gray-200 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 left-0 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-indigo-500 peer-focus:dark:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  htmlFor="floating_last_name"
+                  className="peer-focus:font-medium absolute text-sm text-gray-200 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 left-0 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-indigo-500 peer-focus:dark:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Last name
                 </label>
               </div>
-              <div class="relative z-0 w-full mb-6 group">
+              <div className="relative z-0 w-full mb-6 group">
                 <input
                   type="text"
                   name="floating_phone"
                   id="floating_phone"
-                  class=" block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-indigo-500 focus:outline-none focus:ring-0 focus:border-indigo-500 peer"
+                  className=" block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-indigo-500 focus:outline-none focus:ring-0 focus:border-indigo-500 peer"
                   placeholder=" "
                   required
                 />
                 <label
-                  for="floating_phone"
-                  class="peer-focus:font-medium absolute text-sm text-gray-200 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 left-0 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-indigo-500 peer-focus:dark:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  htmlFor="floating_phone"
+                  className="peer-focus:font-medium absolute text-sm text-gray-200 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 left-0 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-indigo-500 peer-focus:dark:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Phone number
                 </label>
               </div>
-              <div class="relative z-0 w-full md:col-span-2 mb-6 group">
+              <div className="relative z-0 w-full md:col-span-2 mb-6 group">
                 <input
                   type="text"
                   name="floating_company"
                   id="floating_company"
-                  class=" block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-indigo-500 focus:outline-none focus:ring-0 focus:border-indigo-500 peer"
+                  className=" block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-indigo-500 focus:outline-none focus:ring-0 focus:border-indigo-500 peer"
                   placeholder=" "
                   required
                 />
                 <label
-                  for="floating_company"
-                  class="peer-focus:font-medium absolute text-sm text-gray-200 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 left-0 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-indigo-500 peer-focus:dark:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  htmlFor="floating_company"
+                  className="peer-focus:font-medium absolute text-sm text-gray-200 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 left-0 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-indigo-500 peer-focus:dark:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Company (Ex. Google)
                 </label>
@@ -576,15 +576,15 @@ export const Home = () => {
             </div>
             <div className="my-5">
               <label
-                for="message"
-                class="block mb-2 text-sm text-left font-medium dark:text-white"
+                htmlFor="message"
+                className="block mb-2 text-sm text-left font-medium dark:text-white"
               >
                 Message:
               </label>
               <textarea
                 id="message"
                 rows="5"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Write your thoughts here..."
               ></textarea>
             </div>

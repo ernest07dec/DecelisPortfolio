@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   FaLinkedin,
   FaGithub,
@@ -48,11 +49,25 @@ export const Footer = () => {
             <div className="col-span-1 flex justify-center items-end">
               <div className="text-center text-white">
                 <p className=" py-3 flex gap-5 justify-center text-3xl">
-                  <FaLinkedin />
-                  <FaGithub />
-                  <FaFacebook />
-                  <FaInstagram />
-                  <FaDiscord />
+                  <a
+                    href="https://www.linkedin.com/in/ernest-fortune-decelis-613208262/"
+                    target="_blank"
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a href="https://github.com/ernest07dec" target="_blank">
+                    <FaGithub />
+                  </a>
+                  <a href="https://facebook.com/ernest07dec/" target="_blank">
+                    <FaFacebook />
+                  </a>
+
+                  <a
+                    href="https://www.instagram.com/ernest07dec/"
+                    target="_blank"
+                  >
+                    <FaInstagram />
+                  </a>
                 </p>
                 <h2 className="text-2xl text- pb-5">
                   Ernest Fortune J. Decelis
