@@ -178,7 +178,7 @@ export const Header = () => {
                   className={({ isActive }) =>
                     isActive
                       ? "block py-2 pl-3 pr-4 border-b border-solid"
-                      : "block py-2 pl-3 pr-4 hover:border-b hover:border-solid"
+                      : "block py-2 pl-3 pr-4 hover:border-b hover:border-solid "
                   }
                   onClick={handleNav}
                 >

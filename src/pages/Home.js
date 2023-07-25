@@ -238,16 +238,19 @@ export const Home = () => {
                 </div>
               </div>
               <div
+                id="projectlists"
                 className="md:block flex flex-wrap items-center justify-center gap-5 md:gap-0 px-5 py-5 text-xl text-center font-bold hover:cursor-pointer"
                 onClick={(e) => {
-                  e.target.parentElement.previousElementSibling.classList.add(
-                    "motion-safe:animate-bounce"
-                  );
-                  setTimeout(() => {
-                    e.target.parentElement.previousElementSibling.classList.remove(
+                  if (e.target.parentElement.id === "projectlists") {
+                    e.target.parentElement.previousElementSibling.classList.add(
                       "motion-safe:animate-bounce"
                     );
-                  }, 500);
+                    setTimeout(() => {
+                      e.target.parentElement.previousElementSibling.classList.remove(
+                        "motion-safe:animate-bounce"
+                      );
+                    }, 500);
+                  }
                 }}
               >
                 <h3
@@ -421,11 +424,11 @@ export const Home = () => {
             </Link>
           </div>
         </section>
-        <section ref={aboutRef}>
+        <section ref={aboutRef} data-aos="fade-right" data-aos-duration="900">
           <div className="mt-20 pb-8 max-w-screen-xl mx-auto px-5">
-            <div className="grid grid-cols-3 h-[400px] gap-5">
+            <div className="grid  grid-cols-1 md:grid-cols-3 h-full md:h-[400px] gap-5">
               <div
-                className="h-full rounded-3xl col-span-1 overflow-hidden bg-no-repeat bg-cover bg-center"
+                className="h-[450px] md:h-full rounded-3xl col-span-1 overflow-hidden bg-no-repeat bg-cover bg-center"
                 style={{
                   backgroundImage: `url(${About2})`,
                 }}
@@ -451,7 +454,7 @@ export const Home = () => {
                   continuous learning is the compass that guides us through the
                   ever-evolving landscape."
                 </p>
-                <div className="flex justify-end">
+                <div className="flex justify-center pt-10 md:justify-end">
                   <Link to="/about">
                     <button
                       type="button"
@@ -469,7 +472,6 @@ export const Home = () => {
           <div
             className="flex flex-col"
             data-aos="fade-right"
-            data-aos-offset="300"
             data-aos-duration="900"
           >
             <div className="w-full">
@@ -519,6 +521,9 @@ export const Home = () => {
         </section>
         <section
           ref={contactRef}
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-duration="900"
           className="mt-20 pb-8 max-w-screen-xl px-10 mx-auto"
         >
           <form className="max-w-screen-md mx-auto flex flex-col justify-center bg-gray-900 p-10 rounded-2xl">

@@ -52,19 +52,29 @@ export const Footer = () => {
                   <a
                     href="https://www.linkedin.com/in/ernest-fortune-decelis-613208262/"
                     target="_blank"
+                    className="hover:animate-bounce"
                   >
                     <FaLinkedin />
                   </a>
-                  <a href="https://github.com/ernest07dec" target="_blank">
+                  <a
+                    href="https://github.com/ernest07dec"
+                    target="_blank"
+                    className="hover:animate-bounce"
+                  >
                     <FaGithub />
                   </a>
-                  <a href="https://facebook.com/ernest07dec/" target="_blank">
+                  <a
+                    href="https://facebook.com/ernest07dec/"
+                    target="_blank"
+                    className="hover:animate-bounce"
+                  >
                     <FaFacebook />
                   </a>
 
                   <a
                     href="https://www.instagram.com/ernest07dec/"
                     target="_blank"
+                    className="hover:animate-bounce"
                   >
                     <FaInstagram />
                   </a>
