@@ -36,8 +36,7 @@ export const Footer = () => {
                 </h2>
                 <h3 className=" py-1 ">Phone Number: (+63) 977 338 2547</h3>
                 <h3 className=" pt-1 ">
-                  Emails: ernestfortunedecelisyahoo.com.ph,
-                  ernestfortunedecelis@gmail.com
+                  Emails: ernestfortunedecelisyahoo.com.ph
                 </h3>
                 <h3 className=" pb-1 ml-12 pl-1"></h3>
                 <h1 className=" py-1 ">

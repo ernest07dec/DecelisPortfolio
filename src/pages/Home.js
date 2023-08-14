@@ -301,129 +301,17 @@ export const Home = () => {
             </div>
           </div>
         </section>
-        <section className=" pt-20 pb-8 max-w-screen-xl mx-auto overflow-hidden">
-          <h2
-            className="mb-10 text-3xl font-bold text-dark sm:text-4xl md:text-[42px]"
-            data-aos="fade-left"
-            data-aos-offset="300"
-            data-aos-duration="900"
-          >
-            My StartUp Projects
-          </h2>
-          <div
-            className="mx-4 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-5"
-            data-aos="fade-left"
-            data-aos-offset="300"
-            data-aos-duration="900"
-          >
-            <div
-              className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-cover"
-              style={{
-                backgroundImage: `url(${NewsGrid})`,
-              }}
+        <div className="flex justify-end items-end max-w-screen-xl mx-auto px-6">
+          <Link to="/projects">
+            <button
+              type="button"
+              onClick={(e) => window.scrollTo(0, 0)}
+              className="ring-2 ring-blue-200 hover:ring-4 hover:ring-blue-300 font-medium text-sm px-4 py-2 text-center mt-7 md:mr-0 text-lg"
             >
-              <div
-                className="h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
-                onMouseEnter={displayDescription}
-                onMouseLeave={clearDescription}
-              >
-                <h1 className=" font-semibold text-5xl">CarGo Final</h1>
-                <p className="text-gray-300">{description}</p>
-                <p className="text-gray-300">KINDACODE.COM</p>
-              </div>
-            </div>
-            <div
-              className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-cover"
-              style={{
-                backgroundImage: `url(${NewsGrid})`,
-              }}
-            >
-              <div
-                className="h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
-                onMouseEnter={displayDescription}
-                onMouseLeave={clearDescription}
-              >
-                <h1 className=" font-semibold text-5xl">CarGo Final</h1>
-                <p className="text-gray-300">{description}</p>
-                <p className="text-gray-300">KINDACODE.COM</p>
-              </div>
-            </div>
-            <div
-              className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-cover"
-              style={{
-                backgroundImage: `url(${NewsGrid})`,
-              }}
-            >
-              <div
-                className="h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
-                onMouseEnter={displayDescription}
-                onMouseLeave={clearDescription}
-              >
-                <h1 className=" font-semibold text-5xl">CarGo Final</h1>
-                <p className="text-gray-300">{description}</p>
-                <p className="text-gray-300">KINDACODE.COM</p>
-              </div>
-            </div>
-            <div
-              className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-cover"
-              style={{
-                backgroundImage: `url(${NewsGrid})`,
-              }}
-            >
-              <div
-                className="h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
-                onMouseEnter={displayDescription}
-                onMouseLeave={clearDescription}
-              >
-                <h1 className=" font-semibold text-5xl">CarGo Final</h1>
-                <p className="text-gray-300">{description}</p>
-                <p className="text-gray-300">KINDACODE.COM</p>
-              </div>
-            </div>
-            <div
-              className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-cover"
-              style={{
-                backgroundImage: `url(${NewsGrid})`,
-              }}
-            >
-              <div
-                className="h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
-                onMouseEnter={displayDescription}
-                onMouseLeave={clearDescription}
-              >
-                <h1 className=" font-semibold text-5xl">CarGo Final</h1>
-                <p className="text-gray-300">{description}</p>
-                <p className="text-gray-300">KINDACODE.COM</p>
-              </div>
-            </div>
-            <div
-              className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-cover"
-              style={{
-                backgroundImage: `url(${NewsGrid})`,
-              }}
-            >
-              <div
-                className="h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
-                onMouseEnter={displayDescription}
-                onMouseLeave={clearDescription}
-              >
-                <h1 className=" font-semibold text-5xl">CarGo Final</h1>
-                <p className="text-gray-300">{description}</p>
-                <p className="text-gray-300">KINDACODE.COM</p>
-              </div>
-            </div>
-          </div>
-          <div className="py-5 px-5 flex justify-end">
-            <Link to="/projects">
-              <button
-                type="button"
-                className=" flex ring-2 ring-blue-200 hover:ring-4 hover:ring-blue-300 font-medium text-sm px-4 py-2 text-center mt-7 md:mr-0 text-lg"
-              >
-                See More
-              </button>
-            </Link>
-          </div>
-        </section>
+              See More
+            </button>
+          </Link>
+        </div>
         <section ref={aboutRef} data-aos="fade-right" data-aos-duration="900">
           <div className="mt-20 pb-8 max-w-screen-xl mx-auto px-5">
             <div className="grid  grid-cols-1 md:grid-cols-3 h-full md:h-[400px] gap-5">
@@ -458,6 +346,7 @@ export const Home = () => {
                   <Link to="/about">
                     <button
                       type="button"
+                      onClick={(e) => window.scrollTo(0, 0)}
                       className=" flex ring-2 ring-blue-200 text-lg hover:ring-4 hover:ring-blue-300 font-medium text-sm px-4 py-2 text-center mt-4"
                     >
                       See More
@@ -527,7 +416,7 @@ export const Home = () => {
           className="mt-20 pb-8 max-w-screen-xl px-10 mx-auto"
         >
           <form className="max-w-screen-md mx-auto flex flex-col justify-center bg-gray-900 p-10 rounded-2xl">
-            <h2 className="text-5xl mb-10">Contact Form</h2>
+            <h2 className="text-5xl mb-10">Let's Connect!</h2>
             <div className="grid md:grid-cols-3 grid-cols-2 gap-6">
               <div className="relative z-0 w-full mb-6 group">
                 <input

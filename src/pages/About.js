@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 import About1 from "../assets/about1.jpg";
 import About2 from "../assets/about2.jpg";
+import About3 from "../assets/about3.jpg";
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
@@ -18,11 +19,11 @@ export const About = () => {
         <section className="">
           <div className="flex items-center justify-center w-full lg:px-20 pt-10">
             <img src={About1} className="w-[31%] rounded-lg mx-2"></img>
+            <img src={About3} className="w-[31%] rounded-lg mx-2"></img>
             <img
               src={About2}
               className="w-[31%] brightness-90 rounded-lg mx-2"
             ></img>
-            <img src={About1} className="w-[31%] rounded-lg mx-2"></img>
           </div>
 
           <div className="mt-12 pb-8 max-w-screen-xl mx-auto px-5">
@@ -56,74 +57,7 @@ export const About = () => {
                 </div>
               </div>
             </div>
-            <ol class="items-center sm:flex mb-10 w-full px-20 pt-10 text-left">
-              <li class="relative mb-6 sm:mb-0 w-[31%]">
-                <div class="flex items-center">
-                  <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white bg-blue-900 sm:ring-8 ring-gray-900 shrink-0">
-                    <svg
-                      class="w-2.5 h-2.5 text-blue-800 text-blue-300"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                    </svg>
-                  </div>
-                  <div class="hidden sm:flex w-full bg-gray-200 h-0.5 bg-gray-700"></div>
-                </div>
-                <div class="mt-3 sm:pr-8">
-                  <h3 class="text-lg font-semibold  text-white">About Me</h3>
-
-                  <p class="text-base font-normal  ">Know more about Myself</p>
-                </div>
-              </li>
-              <li class="relative mb-6 sm:mb-0 w-[31%]">
-                <div class="flex items-center">
-                  <div class="z-10  flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white bg-blue-900 sm:ring-8 ring-gray-900 shrink-0">
-                    <svg
-                      class="w-2.5 h-2.5 text-blue-800 text-blue-300"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                    </svg>
-                  </div>
-                  <div class="hidden sm:flex w-full bg-gray-200 h-0.5 bg-gray-700"></div>
-                </div>
-                <div class="mt-3 sm:pr-8">
-                  <h3 class="text-lg font-semibold  text-white">About Me</h3>
-
-                  <p class="text-base font-normal  ">Know more about Myself</p>
-                </div>
-              </li>
-              <li class="relative mb-6 sm:mb-0 w-[31%]">
-                <div class="flex items-center">
-                  <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white bg-blue-900 sm:ring-8 ring-gray-900 shrink-0">
-                    <svg
-                      class="w-2.5 h-2.5 text-blue-800 text-blue-300"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                    </svg>
-                  </div>
-                  <div class="hidden sm:flex w-full bg-gray-200 h-0.5 bg-gray-700"></div>
-                </div>
-                <div class="mt-3 sm:pr-8">
-                  <h3 class="text-lg font-semibold  text-white">About Me</h3>
-
-                  <p class="text-base font-normal  ">
-                    Know more about Myself <br />
-                  </p>
-                </div>
-              </li>
-            </ol>
-            <div className="py-8 px-4 sm:px-6 lg:px-8">
+            <div className="py-8 px-4 sm:px-6 lg:px-8 text-center">
               <div className="max-w-7xl mx-auto">
                 <div className="mb-8">
                   <h2 className="text-3xl font-bold mb-4">About Me</h2>
