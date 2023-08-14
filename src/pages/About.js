@@ -30,7 +30,9 @@ export const About = () => {
             <div className="py-8 px-4 sm:px-6 lg:px-8 col-span-1 md:col-span-2 text-center">
               <div className="max-w-7xl mx-auto">
                 <div className="mb-8">
-                  <h2 className="text-3xl font-bold mb-4">Hello! I'm Ernest</h2>
+                  <h2 className="text-3xl font-semibold mb-4">
+                    Hello! I'm Ernest
+                  </h2>
                   <p className="text-lg mb-6">
                     I'm a passionate and driven Full Stack Web Developer with a
                     profound love for technology, creativity, and continuous
@@ -60,7 +62,7 @@ export const About = () => {
             <div className="py-8 px-4 sm:px-6 lg:px-8 text-center">
               <div className="max-w-7xl mx-auto">
                 <div className="mb-8">
-                  <h2 className="text-3xl font-bold mb-4">About Me</h2>
+                  <h2 className="text-3xl font-semibold mb-4">About Me</h2>
                   <p className="text-lg mb-6">
                     A passionate and versatile Full Stack Web Developer based in
                     [Your Location]. With a background in Full Stack Web
@@ -99,7 +101,7 @@ export const About = () => {
                 </div>
 
                 <div className="mb-8">
-                  <h2 className="text-3xl font-bold mb-4">My Journey</h2>
+                  <h2 className="text-3xl font-semibold mb-4">My Journey</h2>
                   <p className="text-lg mb-6">
                     I began my career in the seafaring industry, serving as a
                     training officer. During this time, I played a key role in
@@ -121,7 +123,7 @@ export const About = () => {
                 </div>
 
                 <div className="mb-8">
-                  <h2 className="text-3xl font-bold mb-4">My Strengths</h2>
+                  <h2 className="text-3xl font-semibold mb-4">My Strengths</h2>
                   <ul className="list-disc list-inside text-lg mb-6">
                     <li>Passionate Problem Solver</li>
                     <li>Strong Collaboration and Communication Skills</li>
@@ -140,7 +142,9 @@ export const About = () => {
                 </div>
 
                 <div className="mb-8">
-                  <h2 className="text-3xl font-bold mb-4">Let's Collaborate</h2>
+                  <h2 className="text-3xl font-semibold mb-4">
+                    Let's Collaborate
+                  </h2>
                   <p className="text-lg mb-6">
                     Whether you have a brilliant idea for a web application,
                     need to revamp your existing website, or want to collaborate

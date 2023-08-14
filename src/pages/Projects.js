@@ -114,7 +114,7 @@ export const Projects = () => {
         className="max-w-screen-xl mx-auto px-5 overflow-hidden rounded-l-3xl text-gray-200 pt-24 text-center"
       >
         <h2
-          className="mb-7 text-3xl font-bold text-dark sm:text-4xl md:text-[42px]"
+          className="mb-7 text-3xl font-semibold text-dark sm:text-4xl md:text-[42px]"
           data-aos="fade-left"
           data-aos-offset="300"
           data-aos-duration="900"
@@ -219,7 +219,7 @@ export const Projects = () => {
       </section>
       <section className="text-center text-gray-200 pt-20 pb-20 max-w-screen-xl mx-auto overflow-hidden">
         <h2
-          className="mb-10 text-3xl font-bold text-dark sm:text-5xl md:text-[42px]"
+          className="mb-10 text-3xl font-semibold text-dark sm:text-5xl md:text-[42px]"
           data-aos="fade-left"
           data-aos-offset="300"
           data-aos-duration="900"
@@ -232,96 +232,107 @@ export const Projects = () => {
           data-aos-offset="300"
           data-aos-duration="900"
         >
-          <div
-            className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-cover"
-            style={{
-              backgroundImage: `url(${HTA})`,
-            }}
-          >
+          <div>
             <div
-              className="text-gray-200 h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
-              onMouseEnter={displayDescription}
-              onMouseLeave={clearDescription}
+              className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-center bg-cover h-[260px]"
+              style={{
+                backgroundImage: `url(${HTA})`,
+              }}
             >
-              <h1 className=" font-semibold text-5xl">Hotel Team A</h1>
-              <p>{description}</p>
+              <div
+                className="text-gray-200 h-[260px] grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg ease-in duration-300"
+                onMouseEnter={displayDescription}
+                onMouseLeave={clearDescription}
+              >
+                <p>{description}</p>
+              </div>
             </div>
+            <h1 className="font-semibold text-2xl pt-5 pb-8">Hotel Team A</h1>
           </div>
-          <div
-            className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-cover"
-            style={{
-              backgroundImage: `url(${TicTacToe})`,
-            }}
-          >
+          <div>
             <div
-              className="text-gray-900 h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
-              onMouseEnter={displayDescription}
-              onMouseLeave={clearDescription}
+              className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-center bg-cover h-[260px]"
+              style={{
+                backgroundImage: `url(${TicTacToe})`,
+              }}
             >
-              <h1 className=" font-semibold text-5xl">TicTacToe</h1>
-              <p>{description}</p>
+              <div
+                className="text-gray-900 h-[260px] grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg ease-in duration-300"
+                onMouseEnter={displayDescription}
+                onMouseLeave={clearDescription}
+              >
+                <p>{description}</p>
+              </div>
             </div>
+            <h1 className="font-semibold text-2xl pt-5 pb-8">TicTacToe</h1>
           </div>
-          <div
-            className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-cover"
-            style={{
-              backgroundImage: `url(${Kodeledger})`,
-            }}
-          >
+          <div>
             <div
-              className="text-gray-100 h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
-              onMouseEnter={displayDescription}
-              onMouseLeave={clearDescription}
+              className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-center bg-cover h-[260px]"
+              style={{
+                backgroundImage: `url(${Kodeledger})`,
+              }}
             >
-              <h1 className="font-semibold text-5xl">Kodeledger</h1>
-              <p>{description}</p>
+              <div
+                className="text-gray-100 h-[260px] grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg ease-in duration-300"
+                onMouseEnter={displayDescription}
+                onMouseLeave={clearDescription}
+              >
+                <p>{description}</p>
+              </div>
             </div>
+            <h1 className="font-semibold text-2xl pt-5 pb-8">Kodeledger</h1>
           </div>
-          <div
-            className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-cover"
-            style={{
-              backgroundImage: `url(${Koderesto})`,
-            }}
-          >
+          <div>
             <div
-              className="text-gray-900 h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
-              onMouseEnter={displayDescription}
-              onMouseLeave={clearDescription}
+              className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-center bg-cover h-[260px]"
+              style={{
+                backgroundImage: `url(${Koderesto})`,
+              }}
             >
-              <h1 className="font-semibold text-5xl">KodeResto</h1>
-              <p>{description}</p>
+              <div
+                className="text-gray-900 h-[260px] grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg ease-in duration-300"
+                onMouseEnter={displayDescription}
+                onMouseLeave={clearDescription}
+              >
+                <p>{description}</p>
+              </div>
             </div>
+            <h1 className="font-semibold text-2xl pt-5 pb-8">KodeResto</h1>
           </div>
-
-          <div
-            className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-cover"
-            style={{
-              backgroundImage: `url(${Music})`,
-            }}
-          >
+          <div>
             <div
-              className="text-gray-200 h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
-              onMouseEnter={displayDescription}
-              onMouseLeave={clearDescription}
+              className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-cover h-[260px]"
+              style={{
+                backgroundImage: `url(${Music})`,
+              }}
             >
-              <h1 className="font-semibold text-5xl">Music Preview</h1>
-              <p>{description}</p>
+              <div
+                className="text-gray-200 h-[260px] grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg ease-in duration-300"
+                onMouseEnter={displayDescription}
+                onMouseLeave={clearDescription}
+              >
+                <p>{description}</p>
+              </div>
             </div>
+            <h1 className="font-semibold text-2xl pt-5 pb-8">Music Preview</h1>
           </div>
-          <div
-            className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-cover"
-            style={{
-              backgroundImage: `url(${Shopping})`,
-            }}
-          >
+          <div>
             <div
-              className="text-gray-900 h-64 grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:justify-between ease-in duration-300"
-              onMouseEnter={displayDescription}
-              onMouseLeave={clearDescription}
+              className="h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-center bg-cover h-[260px]"
+              style={{
+                backgroundImage: `url(${Shopping})`,
+              }}
             >
-              <h1 className="font-semibold text-5xl">Shopping List</h1>
-              <p>{description}</p>
+              <div
+                className="text-gray-900 h-[260px] grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg ease-in duration-300"
+                onMouseEnter={displayDescription}
+                onMouseLeave={clearDescription}
+              >
+                <p></p>
+              </div>
             </div>
+            <h1 className="font-semibold text-2xl pt-5 pb-8">Shopping List</h1>
           </div>
         </div>
       </section>

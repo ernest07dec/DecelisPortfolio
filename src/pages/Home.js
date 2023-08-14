@@ -196,7 +196,7 @@ export const Home = () => {
           className="max-w-screen-xl mx-auto px-5 md:mt-0 mt-20 overflow-hidden rounded-l-3xl"
         >
           <h2
-            className="mb-7 text-3xl font-bold text-dark sm:text-4xl md:text-[42px]"
+            className="mb-7 text-3xl font-semibold text-dark sm:text-4xl md:text-[42px]"
             data-aos="fade-left"
             data-aos-offset="300"
             data-aos-duration="900"
@@ -364,7 +364,7 @@ export const Home = () => {
             data-aos-duration="900"
           >
             <div className="w-full">
-              <h2 className="mb-10 text-3xl font-bold text-dark sm:text-4xl md:text-[42px]">
+              <h2 className="mb-10 text-3xl font-semibold text-dark sm:text-4xl md:text-[42px]">
                 Tech Stack
               </h2>
             </div>
