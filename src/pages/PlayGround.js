@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { AnimatedPage } from "../components/AnimatedPage";
 import {
   FaLinkedin,
   FaGithub,
@@ -9,5 +10,5 @@ import {
 import { useState } from "react";
 
 export const PlayGround = () => {
-  return <></>;
+  return <AnimatedPage></AnimatedPage>;
 };
