@@ -31,13 +31,18 @@ export const Header = () => {
             </span>
           </Link>
           <div className="flex md:order-2">
-            <button
-              type="button"
-              className="text-white flex ring-2 ring-blue-200 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0"
+            <a
+              href="https://drive.google.com/file/d/1aZnivgk6oU7piM5-w6BO9bK0EBeugbnM/view?usp=drive_link"
+              target="_blank"
             >
-              <FaDownload className="mr-2 text-lg" />
-              Resume
-            </button>
+              <button
+                type="button"
+                className="text-white flex ring-2 ring-blue-200 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0"
+              >
+                <FaDownload className="mr-2 text-lg" />
+                Resume
+              </button>
+            </a>
             <button
               data-collapse-toggle="navbar-cta"
               type="button"
@@ -135,13 +140,18 @@ export const Header = () => {
             </span>
           </Link>
           <div className="flex md:order-2">
-            <button
-              type="button"
-              className="text-white flex ring-2 ring-blue-200 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0"
+            <a
+              href="https://drive.google.com/file/d/1aZnivgk6oU7piM5-w6BO9bK0EBeugbnM/view?usp=drive_link"
+              target="_blank"
             >
-              <FaDownload className="mr-2 text-lg" />
-              Resume
-            </button>
+              <button
+                type="button"
+                className="text-white flex ring-2 ring-blue-200 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0"
+              >
+                <FaDownload className="mr-2 text-lg" />
+                Resume
+              </button>
+            </a>
             <button
               data-collapse-toggle="navbar-cta"
               type="button"

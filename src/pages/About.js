@@ -1,11 +1,5 @@
 import React, { useEffect } from "react";
-import {
-  FaLinkedin,
-  FaGithub,
-  FaFacebook,
-  FaInstagram,
-  FaDiscord,
-} from "react-icons/fa";
+import { FaFacebookMessenger } from "react-icons/fa";
 import About1 from "../assets/about1.jpg";
 import About2 from "../assets/about2.jpg";
 import About3 from "../assets/about3.jpg";
@@ -26,7 +20,7 @@ export const About = () => {
             ></img>
           </div>
 
-          <div className="mt-12 pb-8 max-w-screen-xl mx-auto px-5">
+          <div className="mt-12 max-w-screen-xl mx-auto px-5">
             <div className="py-8 px-4 sm:px-6 lg:px-8 col-span-1 md:col-span-2 text-center">
               <div className="max-w-7xl mx-auto">
                 <div className="mb-8">
@@ -59,7 +53,7 @@ export const About = () => {
                 </div>
               </div>
             </div>
-            <div className="py-8 px-4 sm:px-6 lg:px-8 text-center">
+            <div className="pt-8 px-4 sm:px-6 lg:px-8 text-center">
               <div className="max-w-7xl mx-auto">
                 <div className="mb-8">
                   <h2 className="text-3xl font-semibold mb-4">About Me</h2>
@@ -142,7 +136,7 @@ export const About = () => {
                 </div>
 
                 <div className="mb-8">
-                  <h2 className="text-3xl font-semibold mb-4">
+                  <h2 className="text-5xl font-semibold mb-4">
                     Let's Collaborate
                   </h2>
                   <p className="text-lg mb-6">
@@ -158,57 +152,128 @@ export const About = () => {
                     creating exceptional web experiences.
                   </p>
                 </div>
+                <div className="w-full flex justify-center items-center">
+                  <a
+                    href="http://m.me/ernest07dec"
+                    className="text-5xl flex justify-end items-end animate-bounce"
+                    target="_blank"
+                  >
+                    Connect with <FaFacebookMessenger className="ml-5" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-          <div className="col-span-2 text-left flex flex-col justify-between py-4">
-            {/* <p className="text-2xl  indent-10">
-              Welcome to my portfolio website! I'm thrilled to have you here.
-              Allow me to introduce myself; I am a passionate and creative
-              full-stack web developer on a mission to turn ideas into stunning
-              digital realities. From an early age, I found myself captivated by
-              the infinite possibilities that technology could offer. This
-              fascination led me to embark on a journey to become a skilled
-              developer, and now I am proud to call myself a full-stack expert.
-              With a strong foundation in both front-end and back-end
-              development, I enjoy building robust and user-friendly web
-              applications that leave a lasting impact. My development journey
-              began with an insatiable curiosity for programming languages and
-              frameworks. As the years passed, I immersed myself in various
-              technologies, including HTML, CSS, JavaScript, Python, Node.js,
-              React, and more. Each project I tackled honed my skills and
-              deepened my understanding of software development. But being a web
-              developer is not just about writing code; it's about translating
-              visions into tangible solutions. I believe in the power of
-              collaboration and open communication to ensure that the end
-              product exceeds expectations. By working closely with clients and
-              teams, I can deliver results that not only meet technical
-              requirements but also resonate with the target audience. One
-              aspect that sets me apart as a developer is my dedication to
-              continuous learning and improvement. Technology is constantly
-              evolving, and I eagerly embrace new trends and innovations to stay
-              at the forefront of the industry. This adaptability allows me to
-              provide modern, future-proof solutions for every project I
-              undertake. In addition to my technical skills, I have a keen eye
-              for design and aesthetics. I understand that user experience is
-              paramount in today's digital landscape, and I take pride in
-              crafting intuitive interfaces that engage and delight users.
-              Throughout my portfolio, you'll find a diverse range of projects
-              that showcase my versatility as a full-stack web developer.
-              Whether it's building dynamic e-commerce platforms, creating
-              interactive web applications, or optimizing websites for peak
-              performance, I pour my heart and soul into every line of code.
-              Thank you for visiting my portfolio website; I hope you enjoy
-              exploring my work. If you have any questions or would like to
-              collaborate on an exciting project, feel free to reach out. Let's
-              bring your ideas to life together!
-            </p>
-            <p className="text-2xl mt-3 indent-10">
-              "Embrace the winds of change, for in the realm of technology,
-              continuous learning is the compass that guides us through the
-              ever-evolving landscape."
-            </p> */}
-          </div>
+        </section>
+        <section className="max-w-screen-xl pb-10 px-10 mx-auto">
+          <h2 className="text-5xl mb-10 text-center">or</h2>
+          <form className="max-w-screen-md mx-auto flex flex-col justify-center bg-gray-900 p-10 rounded-2xl">
+            <h2 className="text-5xl mb-10">Let's Connect!</h2>
+            <div className="grid md:grid-cols-3 grid-cols-2 gap-6">
+              <div className="relative z-0 w-full mb-6 group">
+                <input
+                  type="email"
+                  name="floating_email"
+                  id="floating_email"
+                  className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-indigo-500 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  htmlFor="floating_email"
+                  className="peer-focus:font-medium absolute text-sm text-gray-200 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 left-0 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-indigo-500 peer-focus:dark:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Email address
+                </label>
+              </div>
+              <div className="relative z-0 w-full mb-6 group">
+                <input
+                  type="text"
+                  name="floating_first_name"
+                  id="floating_first_name"
+                  className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-indigo-500 focus:outline-none focus:ring-0 focus:border-indigo-500 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  htmlFor="floating_first_name"
+                  className="peer-focus:font-medium absolute text-sm text-gray-200 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 left-0 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-indigo-500 peer-focus:dark:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  First name
+                </label>
+              </div>
+              <div className="relative z-0 w-full mb-6 group">
+                <input
+                  type="text"
+                  name="floating_last_name"
+                  id="floating_last_name"
+                  className="block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-indigo-500 focus:outline-none focus:ring-0 focus:border-indigo-500 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  htmlFor="floating_last_name"
+                  className="peer-focus:font-medium absolute text-sm text-gray-200 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 left-0 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-indigo-500 peer-focus:dark:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Last name
+                </label>
+              </div>
+              <div className="relative z-0 w-full mb-6 group">
+                <input
+                  type="text"
+                  name="floating_phone"
+                  id="floating_phone"
+                  className=" block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-indigo-500 focus:outline-none focus:ring-0 focus:border-indigo-500 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  htmlFor="floating_phone"
+                  className="peer-focus:font-medium absolute text-sm text-gray-200 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 left-0 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-indigo-500 peer-focus:dark:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Phone number
+                </label>
+              </div>
+              <div className="relative z-0 w-full md:col-span-2 mb-6 group">
+                <input
+                  type="text"
+                  name="floating_company"
+                  id="floating_company"
+                  className=" block py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-indigo-500 focus:outline-none focus:ring-0 focus:border-indigo-500 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  htmlFor="floating_company"
+                  className="peer-focus:font-medium absolute text-sm text-gray-200 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 left-0 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-indigo-500 peer-focus:dark:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Company
+                </label>
+              </div>
+            </div>
+            <div className="my-5">
+              <label
+                htmlFor="message"
+                className="block mb-2 text-sm text-left font-medium dark:text-white"
+              >
+                Message:
+              </label>
+              <textarea
+                id="message"
+                rows="5"
+                className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Write your thoughts here..."
+              ></textarea>
+            </div>
+            <div>
+              <button
+                type="submit"
+                className=" ring-2 ring-blue-200 text-lg hover:ring-4 hover:ring-blue-300 font-medium text-sm px-6 py-2 text-center mt-4"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
         </section>
       </div>
     </div>

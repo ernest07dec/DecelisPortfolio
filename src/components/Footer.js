@@ -5,7 +5,7 @@ import {
   FaGithub,
   FaFacebook,
   FaInstagram,
-  FaDiscord,
+  FaFacebookMessenger,
   FaArrowUp,
 } from "react-icons/fa";
 import { useState } from "react";
@@ -94,6 +94,13 @@ export const Footer = () => {
           </p>
         </div>
       </footer>
+      <a
+        href="http://m.me/ernest07dec"
+        target="_blank"
+        className="fixed bottom-12 right-24 bg-gray-100 p-3 text-blue-900 rounded-full text-2xl opacity-70 hover:opacity-90 hover:cursor-pointer z-50"
+      >
+        <FaFacebookMessenger />
+      </a>
       {scrollTop >= 500 ? (
         <div
           className="fixed bottom-12 right-10 bg-gray-100 p-3 text-blue-900 rounded-full text-2xl opacity-70 hover:opacity-90 hover:cursor-pointer z-50"
