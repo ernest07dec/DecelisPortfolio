@@ -116,8 +116,8 @@ export const Projects = () => {
         );
 
         setProjLink(
-          <a target="_blank" href="http://capstone-cargo.vercel.app/">
-            capstone-cargo.vercel.app
+          <a target="_blank" href="https://cinecinecinezone.vercel.app/">
+            cinecinecinezone.vercel.app
           </a>
         );
         break;
@@ -128,8 +128,8 @@ export const Projects = () => {
         );
 
         setProjLink(
-          <a target="_blank" href="http://capstone-cargo.vercel.app/">
-            capstone-cargo.vercel.app
+          <a target="_blank" href="https://github.com/ernest07dec/kodejobs">
+            github.com/ernest07dec/kodejobs
           </a>
         );
         break;
@@ -140,8 +140,8 @@ export const Projects = () => {
         );
 
         setProjLink(
-          <a target="_blank" href="http://capstone-cargo.vercel.app/">
-            capstone-cargo.vercel.app
+          <a target="_blank" href="https://cinezone.netlify.app/">
+            cinezone.netlify.app
           </a>
         );
         break;
@@ -164,8 +164,8 @@ export const Projects = () => {
         );
 
         setProjLink(
-          <a target="_blank" href="http://capstone-cargo.vercel.app/">
-            capstone-cargo.vercel.app
+          <a target="_blank" href="https://dapper-faun-bf6af2.netlify.app/">
+            dapper-faun-bf6af2.netlify.app
           </a>
         );
         break;
@@ -182,6 +182,43 @@ export const Projects = () => {
     setTitle("");
     setDescription("");
     setProjLink("");
+  };
+  const miniDisplay = (e, miniTitle) => {
+    switch (miniTitle) {
+      case "HTA":
+        e.target.innerHTML = `<p>Pure HTML & CSS Demo</p> <a target="_blank" href="https://brilliant-caramel-84c97a.netlify.app/">
+        Link: brilliant-caramel-84c97a.netlify.app
+      </a> `;
+        break;
+      case "TicTacToe":
+        e.target.innerHTML = `<p>React and Logic Demo</p> <a target="_blank" href="https://codepen.io/Ernest-Fortune-Decelis/pen/mdQzXKp">
+        Link: codepen.io/Ernest-Fortune-Decelis/pen/mdQzXKp
+      </a> `;
+        break;
+      case "Kodeledger":
+        e.target.innerHTML = `<p>Pure HTML & CSS Demo</p> <a target="_blank" href="https://velvety-donut-f880b6.netlify.app/">
+        Link: velvety-donut-f880b6.netlify.app
+      </a> `;
+        break;
+      case "KodeResto":
+        e.target.innerHTML = `<p>Bootstrap Demo</p> <a target="_blank" href="https://wondrous-gaufre-72bbe8.netlify.app/">
+        Link: wondrous-gaufre-72bbe8.netlify.app
+      </a> `;
+        break;
+      case "Music":
+        e.target.innerHTML = `<p>Pure HTML & CSS plus API interaction Demo</p> <a target="_blank" href="https://codepen.io/Ernest-Fortune-Decelis/pen/wvQYGXY">
+        Link: codepen.io/Ernest-Fortune-Decelis/pen/wvQYGXY
+      </a> `;
+        break;
+      case "ShoppingList":
+        e.target.innerHTML = `<p>Javascript Fundamentals Demo</p> <a target="_blank" href="https://elaborate-parfait-cec28e.netlify.app/">
+        Link: elaborate-parfait-cec28e.netlify.app/
+      </a> `;
+        break;
+    }
+  };
+  const clearMini = (e) => {
+    e.target.innerHTML = "";
   };
   return (
     <>
@@ -317,8 +354,8 @@ export const Projects = () => {
             >
               <div
                 className="text-gray-200 h-[260px] grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg ease-in duration-300"
-                onMouseEnter={displayDescription}
-                onMouseLeave={clearDescription}
+                onMouseEnter={(e) => miniDisplay(e, "HTA")}
+                onMouseLeave={clearMini}
               >
                 <p>{description}</p>
               </div>
@@ -334,8 +371,8 @@ export const Projects = () => {
             >
               <div
                 className="text-gray-900 h-[260px] grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg ease-in duration-300"
-                onMouseEnter={displayDescription}
-                onMouseLeave={clearDescription}
+                onMouseEnter={(e) => miniDisplay(e, "TicTacToe")}
+                onMouseLeave={clearMini}
               >
                 <p>{description}</p>
               </div>
@@ -351,8 +388,8 @@ export const Projects = () => {
             >
               <div
                 className="text-gray-100 h-[260px] grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg ease-in duration-300"
-                onMouseEnter={displayDescription}
-                onMouseLeave={clearDescription}
+                onMouseEnter={(e) => miniDisplay(e, "Kodeledger")}
+                onMouseLeave={clearMini}
               >
                 <p>{description}</p>
               </div>
@@ -368,8 +405,8 @@ export const Projects = () => {
             >
               <div
                 className="text-gray-900 h-[260px] grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg ease-in duration-300"
-                onMouseEnter={displayDescription}
-                onMouseLeave={clearDescription}
+                onMouseEnter={(e) => miniDisplay(e, "KodeResto")}
+                onMouseLeave={clearMini}
               >
                 <p>{description}</p>
               </div>
@@ -385,8 +422,8 @@ export const Projects = () => {
             >
               <div
                 className="text-gray-200 h-[260px] grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg ease-in duration-300"
-                onMouseEnter={displayDescription}
-                onMouseLeave={clearDescription}
+                onMouseEnter={(e) => miniDisplay(e, "Music")}
+                onMouseLeave={clearMini}
               >
                 <p>{description}</p>
               </div>
@@ -402,8 +439,8 @@ export const Projects = () => {
             >
               <div
                 className="text-gray-900 h-[260px] grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg ease-in duration-300"
-                onMouseEnter={displayDescription}
-                onMouseLeave={clearDescription}
+                onMouseEnter={(e) => miniDisplay(e, "ShoppingList")}
+                onMouseLeave={clearMini}
               >
                 <p></p>
               </div>

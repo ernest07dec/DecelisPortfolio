@@ -127,8 +127,8 @@ export const Home = () => {
         );
 
         setProjLink(
-          <a target="_blank" href="http://capstone-cargo.vercel.app/">
-            capstone-cargo.vercel.app
+          <a target="_blank" href="https://cinecinecinezone.vercel.app/">
+            cinecinecinezone.vercel.app
           </a>
         );
         break;
@@ -139,8 +139,8 @@ export const Home = () => {
         );
 
         setProjLink(
-          <a target="_blank" href="http://capstone-cargo.vercel.app/">
-            capstone-cargo.vercel.app
+          <a target="_blank" href="https://github.com/ernest07dec/kodejobs">
+            github.com/ernest07dec/kodejobs
           </a>
         );
         break;
@@ -151,8 +151,8 @@ export const Home = () => {
         );
 
         setProjLink(
-          <a target="_blank" href="http://capstone-cargo.vercel.app/">
-            capstone-cargo.vercel.app
+          <a target="_blank" href="https://cinezone.netlify.app/">
+            cinezone.netlify.app
           </a>
         );
         break;
@@ -175,8 +175,8 @@ export const Home = () => {
         );
 
         setProjLink(
-          <a target="_blank" href="http://capstone-cargo.vercel.app/">
-            capstone-cargo.vercel.app
+          <a target="_blank" href="https://dapper-faun-bf6af2.netlify.app/">
+            dapper-faun-bf6af2.netlify.app
           </a>
         );
         break;
