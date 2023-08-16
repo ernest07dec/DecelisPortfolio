@@ -99,10 +99,86 @@ export const Home = () => {
       case "CarGo Final":
         setTitle("CarGo Final");
         setDescription(
-          "So if you're looking for a reliable, affordable, and convenient car rental company for your next trip, look no further than us. Our commitment to customer satisfaction, coupled with our wide range of vehicles and flexible rental options, makes us the ideal choice for all your transportation needs."
+          "If you're looking for a reliable, affordable, and convenient car rental company for your next trip, look no further than us. Our commitment to customer satisfaction, coupled with our wide range of vehicles and flexible rental options, makes us the ideal choice for all your transportation needs.(All skills applied - MERN Stack)"
         );
 
-        setProjLink("capstone-cargo.vercel.app");
+        setProjLink(
+          <a target="_blank" href="http://capstone-cargo.vercel.app/">
+            capstone-cargo.vercel.app
+          </a>
+        );
+        break;
+      case "NutriChefHub":
+        setTitle("NutriChefHub");
+        setDescription(
+          "Indulge in Health: Delight your taste buds with nutritious recipes, unlock vitality, and embark on a journey to a vibrant, fulfilling life."
+        );
+
+        setProjLink(
+          <a target="_blank" href="https://nutrichefmend2.netlify.app/">
+            nutrichefmend2.netlify.app
+          </a>
+        );
+        break;
+      case "CineZone V2.0":
+        setTitle("CineZone V2.0");
+        setDescription(
+          "CineZone is a dynamic cinema website app that delivers real-time updates on screenings and showtimes across various theaters. Its user-friendly interface allows movie enthusiasts to effortlessly explore films, access detailed movie information, and stay updated on schedules. With features like instant notifications, interactive seat selection, and seamless booking, CineZone redefines the moviegoing experience, ensuring users never miss out on cinematic moments. From blockbuster premieres to indie treasures, CineZone simplifies movie planning, making it an essential tool for film aficionados. (REACT VERSION)"
+        );
+
+        setProjLink(
+          <a target="_blank" href="http://capstone-cargo.vercel.app/">
+            capstone-cargo.vercel.app
+          </a>
+        );
+        break;
+      case "KodeJobs":
+        setTitle("KodeJobs");
+        setDescription(
+          "KodeJobs: Effortlessly post and find web development jobs. Connects employers with skilled professionals. Streamline your coding career journey today. Your gateway to simplified web development hiring."
+        );
+
+        setProjLink(
+          <a target="_blank" href="http://capstone-cargo.vercel.app/">
+            capstone-cargo.vercel.app
+          </a>
+        );
+        break;
+      case "CineZone V1.0":
+        setTitle("CineZone V1.0");
+        setDescription(
+          "CineZone is a dynamic cinema website app that delivers real-time updates on screenings and showtimes across various theaters. Its user-friendly interface allows movie enthusiasts to effortlessly explore films, access detailed movie information, and stay updated on schedules. With features like instant notifications, interactive seat selection, and seamless booking, CineZone redefines the moviegoing experience, ensuring users never miss out on cinematic moments. From blockbuster premieres to indie treasures, CineZone simplifies movie planning, making it an essential tool for film aficionados.(FUNDAMENTALS VERSION)"
+        );
+
+        setProjLink(
+          <a target="_blank" href="http://capstone-cargo.vercel.app/">
+            capstone-cargo.vercel.app
+          </a>
+        );
+        break;
+      case "CarGo":
+        setTitle("CarGo");
+        setDescription(
+          "If you're looking for a reliable, affordable, and convenient car rental company for your next trip, look no further than us. Our commitment to customer satisfaction, coupled with our wide range of vehicles and flexible rental options, makes us the ideal choice for all your transportation needs.(Front End Demo)"
+        );
+
+        setProjLink(
+          <a target="_blank" href="https://cargo-mini-project.netlify.app/">
+            cargo-mini-project.netlify.app
+          </a>
+        );
+        break;
+      case "NewsGrid":
+        setTitle("NewsGrid");
+        setDescription(
+          "NewsGrid: Your go-to source for breaking news and in-depth stories. Stay informed with timely updates across various topics. Engage with thought-provoking articles from around the world. Navigate a dynamic news landscape with NewsGrid. (Pure HTML & CSS Demo)"
+        );
+
+        setProjLink(
+          <a target="_blank" href="http://capstone-cargo.vercel.app/">
+            capstone-cargo.vercel.app
+          </a>
+        );
         break;
 
       default:
@@ -232,7 +308,7 @@ export const Home = () => {
                     {title}
                   </h1>
                   <p className="text-lg">{description}</p>
-                  <p className="mb-10 hover:cursor-pointer hover:underline">
+                  <p className="mb-10 hover:cursor-pointer underline">
                     {projLink}
                   </p>
                 </div>

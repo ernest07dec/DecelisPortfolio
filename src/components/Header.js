@@ -107,7 +107,7 @@ export const Header = () => {
                   Projects
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   to="/playground"
                   className={({ isActive }) =>
@@ -119,7 +119,7 @@ export const Header = () => {
                 >
                   PlayGround
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -211,7 +211,7 @@ export const Header = () => {
                   Projects
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   to="/playground"
                   className={({ isActive }) =>
@@ -223,7 +223,7 @@ export const Header = () => {
                 >
                   PlayGround
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

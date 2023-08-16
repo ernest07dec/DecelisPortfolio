@@ -88,15 +88,91 @@ export const Projects = () => {
       case "CarGo Final":
         setTitle("CarGo Final");
         setDescription(
-          "So if you're looking for a reliable, affordable, and convenient car rental company for your next trip, look no further than us. Our commitment to customer satisfaction, coupled with our wide range of vehicles and flexible rental options, makes us the ideal choice for all your transportation needs."
+          "If you're looking for a reliable, affordable, and convenient car rental company for your next trip, look no further than us. Our commitment to customer satisfaction, coupled with our wide range of vehicles and flexible rental options, makes us the ideal choice for all your transportation needs.(All skills applied - MERN Stack)"
         );
 
-        setProjLink("capstone-cargo.vercel.app");
+        setProjLink(
+          <a target="_blank" href="http://capstone-cargo.vercel.app/">
+            capstone-cargo.vercel.app
+          </a>
+        );
+        break;
+      case "NutriChefHub":
+        setTitle("NutriChefHub");
+        setDescription(
+          "Indulge in Health: Delight your taste buds with nutritious recipes, unlock vitality, and embark on a journey to a vibrant, fulfilling life."
+        );
+
+        setProjLink(
+          <a target="_blank" href="https://nutrichefmend2.netlify.app/">
+            nutrichefmend2.netlify.app
+          </a>
+        );
+        break;
+      case "CineZone V2.0":
+        setTitle("CineZone V2.0");
+        setDescription(
+          "CineZone is a dynamic cinema website app that delivers real-time updates on screenings and showtimes across various theaters. Its user-friendly interface allows movie enthusiasts to effortlessly explore films, access detailed movie information, and stay updated on schedules. With features like instant notifications, interactive seat selection, and seamless booking, CineZone redefines the moviegoing experience, ensuring users never miss out on cinematic moments. From blockbuster premieres to indie treasures, CineZone simplifies movie planning, making it an essential tool for film aficionados. (REACT VERSION)"
+        );
+
+        setProjLink(
+          <a target="_blank" href="http://capstone-cargo.vercel.app/">
+            capstone-cargo.vercel.app
+          </a>
+        );
+        break;
+      case "KodeJobs":
+        setTitle("KodeJobs");
+        setDescription(
+          "KodeJobs: Effortlessly post and find web development jobs. Connects employers with skilled professionals. Streamline your coding career journey today. Your gateway to simplified web development hiring."
+        );
+
+        setProjLink(
+          <a target="_blank" href="http://capstone-cargo.vercel.app/">
+            capstone-cargo.vercel.app
+          </a>
+        );
+        break;
+      case "CineZone V1.0":
+        setTitle("CineZone V1.0");
+        setDescription(
+          "CineZone is a dynamic cinema website app that delivers real-time updates on screenings and showtimes across various theaters. Its user-friendly interface allows movie enthusiasts to effortlessly explore films, access detailed movie information, and stay updated on schedules. With features like instant notifications, interactive seat selection, and seamless booking, CineZone redefines the moviegoing experience, ensuring users never miss out on cinematic moments. From blockbuster premieres to indie treasures, CineZone simplifies movie planning, making it an essential tool for film aficionados.(FUNDAMENTALS VERSION)"
+        );
+
+        setProjLink(
+          <a target="_blank" href="http://capstone-cargo.vercel.app/">
+            capstone-cargo.vercel.app
+          </a>
+        );
+        break;
+      case "CarGo":
+        setTitle("CarGo");
+        setDescription(
+          "If you're looking for a reliable, affordable, and convenient car rental company for your next trip, look no further than us. Our commitment to customer satisfaction, coupled with our wide range of vehicles and flexible rental options, makes us the ideal choice for all your transportation needs.(Front End Demo)"
+        );
+
+        setProjLink(
+          <a target="_blank" href="https://cargo-mini-project.netlify.app/">
+            cargo-mini-project.netlify.app
+          </a>
+        );
+        break;
+      case "NewsGrid":
+        setTitle("NewsGrid");
+        setDescription(
+          "NewsGrid: Your go-to source for breaking news and in-depth stories. Stay informed with timely updates across various topics. Engage with thought-provoking articles from around the world. Navigate a dynamic news landscape with NewsGrid. (Pure HTML & CSS Demo)"
+        );
+
+        setProjLink(
+          <a target="_blank" href="http://capstone-cargo.vercel.app/">
+            capstone-cargo.vercel.app
+          </a>
+        );
         break;
 
       default:
         setTitle("TITLE");
-        setDescription("https://codepen.io/Ernest-Fortune-Decelis/pen/wvQYGXY");
+        setDescription("DESCRIPTION DESCRIPTION");
         setProjLink("linklinklink");
         break;
     }
@@ -111,7 +187,7 @@ export const Projects = () => {
     <>
       <section
         ref={projectRef}
-        className="max-w-screen-xl mx-auto px-5 overflow-hidden rounded-l-3xl text-gray-200 pt-24 text-center"
+        className="max-w-screen-xl mx-auto px-5 md:mt-0 pt-32 mt-20 overflow-hidden rounded-l-3xl  text-gray-200 text-center"
       >
         <h2
           className="mb-7 text-3xl font-semibold text-dark sm:text-4xl md:text-[42px]"
@@ -148,7 +224,7 @@ export const Projects = () => {
               <div className="h-full w-full overflow-hidden rounded-3xl grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:backdrop-brightness-50 hover:justify-between ease-in duration-300 z-40">
                 <h1 className="mt-10  font-semibold text-5xl pb-5">{title}</h1>
                 <p className="text-lg">{description}</p>
-                <p className="mb-10 hover:cursor-pointer hover:underline">
+                <p className="mb-10 hover:cursor-pointer underline">
                   {projLink}
                 </p>
               </div>
@@ -234,7 +310,7 @@ export const Projects = () => {
         >
           <div>
             <div
-              className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-center bg-cover h-[260px]"
+              className=" grid w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-center bg-cover h-[260px]"
               style={{
                 backgroundImage: `url(${HTA})`,
               }}
@@ -251,7 +327,7 @@ export const Projects = () => {
           </div>
           <div>
             <div
-              className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-center bg-cover h-[260px]"
+              className=" grid w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-center bg-cover h-[260px]"
               style={{
                 backgroundImage: `url(${TicTacToe})`,
               }}
@@ -268,7 +344,7 @@ export const Projects = () => {
           </div>
           <div>
             <div
-              className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-center bg-cover h-[260px]"
+              className=" grid w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-center bg-cover h-[260px]"
               style={{
                 backgroundImage: `url(${Kodeledger})`,
               }}
@@ -285,7 +361,7 @@ export const Projects = () => {
           </div>
           <div>
             <div
-              className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-center bg-cover h-[260px]"
+              className=" grid w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-center bg-cover h-[260px]"
               style={{
                 backgroundImage: `url(${Koderesto})`,
               }}
@@ -302,7 +378,7 @@ export const Projects = () => {
           </div>
           <div>
             <div
-              className=" grid h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-cover h-[260px]"
+              className=" grid w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-cover h-[260px]"
               style={{
                 backgroundImage: `url(${Music})`,
               }}
@@ -319,7 +395,7 @@ export const Projects = () => {
           </div>
           <div>
             <div
-              className="h-full w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-center bg-cover h-[260px]"
+              className="w-full items-center overflow-hidden rounded-3xl bg-no-repeat bg-center bg-cover h-[260px]"
               style={{
                 backgroundImage: `url(${Shopping})`,
               }}
