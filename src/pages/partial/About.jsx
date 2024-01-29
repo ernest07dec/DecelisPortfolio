@@ -1,18 +1,19 @@
 import React, { useEffect } from "react";
-import { AnimatedPage } from "../components/AnimatedPage";
+import { AnimatedPage } from "../../components/framermotion/AnimatedPage";
 import { FaFacebookMessenger } from "react-icons/fa";
-import About1 from "../assets/about1.jpg";
-import About2 from "../assets/about2.jpg";
-import About3 from "../assets/about3.jpg";
+import About1 from "../../assets/about1.jpg";
+import About2 from "../../assets/about2.jpg";
+import About3 from "../../assets/about3.jpg";
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import EmailForm from "../components/EmailForm";
+import EmailForm from "../../components/emailjs/EmailForm";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 export const About = () => {
   return (
     <AnimatedPage>
+      A
       <div className="max-w-screen-xl mx-auto pt-20">
         <div className="text-gray-200">
           <section className="">

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { AnimatedPage } from "../components/AnimatedPage";
+import { AnimatedPage } from "../../components/framermotion/AnimatedPage";
 import {
   FaLinkedin,
   FaGithub,

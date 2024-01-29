@@ -2,15 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* SROLL BEHAVIOR */
 * {
   scroll-behavior: smooth;
 }
-
+/* SMALL DEVICES CONFIG */
 @media only screen and (max-width: 375px) {
   html {
     font-size: 60%;
   }
 }
+/* MEDIUM DEVICES CONFIG */
 @media (min-width: 376px) and (max-width: 680px) {
   html {
     font-size: 75%;
