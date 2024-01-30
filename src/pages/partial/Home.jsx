@@ -196,19 +196,8 @@ export const Home = () => {
           </div>
         </section>
         {/* TECH STACKS */}
-        <section className="mt-20 pb-8 max-w-screen-xl mx-auto">
-          <div
-            className="flex flex-col"
-            data-aos="fade-right"
-            data-aos-duration="900"
-          >
-            <div className="w-full">
-              <h2 className="mb-10 text-3xl font-semibold text-dark sm:text-4xl md:text-[42px]">
-                Tech Stack
-              </h2>
-            </div>
-            <TechStacks />
-          </div>
+        <section className="mt-24">
+          <TechStacks />
         </section>
         {/* EMAIL JS */}
         <section

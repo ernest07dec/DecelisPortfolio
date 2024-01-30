@@ -1,4 +1,11 @@
-import React from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+// import required modules
+import { Autoplay, Scrollbar } from "swiper/modules";
+import "./styleswiper.css";
+
 import Bootstrap from "../../assets/bootstrap.png";
 import Express from "../../assets/express.png";
 import Github from "../../assets/github.png";
@@ -13,46 +20,75 @@ import css from "../../assets/css.png";
 import javascript from "../../assets/javascript.png";
 
 export const TechStacks = () => {
+  const languages = [
+    Mongodb,
+    Express,
+    Reactlogo,
+    Nodejs,
+    Tailwind,
+    Bootstrap,
+    Laravel,
+    Php,
+    Github,
+    javascript,
+    html,
+    css,
+  ];
+
   return (
     <>
-      <div className="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-y-10">
-        <div className="flex h-44 w-44 justify-center items-center bg-gray-200 rounded-3xl mx-auto p-1">
-          <img src={Mongodb} />
-        </div>
-        <div className="flex h-44 w-44 justify-center items-center bg-gray-200 rounded-3xl mx-auto p-1">
-          <img className="h-32" src={Express} />
-        </div>
-        <div className="flex h-44 w-44 justify-center items-center bg-gray-200 rounded-3xl mx-auto p-1">
-          <img src={Reactlogo} />
-        </div>
-        <div className="flex h-44 w-44 justify-center items-center bg-gray-200 rounded-3xl mx-auto p-1">
-          <img src={Nodejs} />
-        </div>
-        <div className="flex h-44 w-44 justify-center items-center bg-gray-200 rounded-3xl mx-auto p-1">
-          <img src={Tailwind} />
-        </div>
-        <div className="flex h-44 w-44 justify-center items-center bg-gray-200 rounded-3xl mx-auto p-1">
-          <img src={Bootstrap} />
-        </div>
-        <div className="flex h-44 w-44 justify-center items-center bg-gray-200 rounded-3xl mx-auto p-1">
-          <img src={Laravel} />
-        </div>
-        <div className="flex h-44 w-44 justify-center items-center bg-gray-200 rounded-3xl mx-auto p-1">
-          <img src={Php} />
-        </div>
-        <div className="flex h-44 w-44 justify-center items-center bg-gray-200 rounded-3xl mx-auto p-1">
-          <img src={Github} />
-        </div>
-        <div className="flex w-44 justify-center items-center bg-gray-200 rounded-3xl mx-auto p-1">
-          <img className="h-32" src={javascript} />
-        </div>
-        <div className="flex w-44 justify-center items-center bg-gray-200 rounded-3xl mx-auto p-2">
-          <img className="h-32" src={html} />
-        </div>
-        <div className="flex w-44 justify-center items-center bg-gray-200 rounded-3xl mx-auto p-5">
-          <img className="h-32" src={css} />
-        </div>
-      </div>
+      <section className="w-screen bg-gray-200 px-10">
+        <Swiper
+          breakpoints={{
+            0: {
+              slidesPerView: 4,
+              slidesPerGroup: 2,
+              initialSlide: 1,
+            },
+            480: {
+              slidesPerView: 5,
+              slidesPerGroup: 2,
+              initialSlide: 1,
+            },
+            768: {
+              slidesPerView: 6,
+              slidesPerGroup: 2,
+              initialSlide: 1,
+            },
+            1040: {
+              slidesPerView: 8,
+              slidesPerGroup: 3,
+              initialSlide: 1,
+            },
+          }}
+          spaceBetween={0}
+          centeredSlides={true}
+          autoplay={{
+            delay: 1000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Autoplay, Scrollbar]}
+        >
+          {languages.map((language, index) => {
+            return (
+              <SwiperSlide>
+                <div
+                  key={index}
+                  className="flex justify-center items-center rounded-3xl mx-auto p-5 lg:h-44 md:h-36  h-32 lg:w-44 md:w-36 w-32"
+                >
+                  <img
+                    src={language}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </section>
     </>
   );
 };
