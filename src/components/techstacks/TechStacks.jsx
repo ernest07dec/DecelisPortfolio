@@ -3,9 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 // import required modules
-import { Autoplay, Scrollbar } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "./styleswiper.css";
 
+// LANGUAGE IMAGES
 import Bootstrap from "../../assets/bootstrap.png";
 import Express from "../../assets/express.png";
 import Github from "../../assets/github.png";
@@ -20,6 +21,7 @@ import css from "../../assets/css.png";
 import javascript from "../../assets/javascript.png";
 
 export const TechStacks = () => {
+  // LANGUAGES
   const languages = [
     Mongodb,
     Express,
@@ -38,6 +40,7 @@ export const TechStacks = () => {
   return (
     <>
       <section className="w-screen bg-gray-200 px-10">
+        {/* SWIPER INITIALIZATION */}
         <Swiper
           breakpoints={{
             0: {
@@ -70,15 +73,13 @@ export const TechStacks = () => {
           pagination={{
             clickable: true,
           }}
-          modules={[Autoplay, Scrollbar]}
+          modules={[Autoplay]}
         >
+          {/* SWIPER SLIDES */}
           {languages.map((language, index) => {
             return (
-              <SwiperSlide>
-                <div
-                  key={index}
-                  className="flex justify-center items-center rounded-3xl mx-auto p-5 lg:h-44 md:h-36  h-32 lg:w-44 md:w-36 w-32"
-                >
+              <SwiperSlide key={index}>
+                <div className="flex justify-center items-center rounded-3xl mx-auto p-5 lg:h-44 md:h-36  h-32 lg:w-44 md:w-36 w-32">
                   <img
                     src={language}
                     className="h-full w-full object-contain"
