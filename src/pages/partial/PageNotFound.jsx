@@ -1,16 +1,9 @@
 import React, { useEffect } from "react";
 import { AnimatedPage } from "../../components/framermotion/AnimatedPage";
-import {
-  FaLinkedin,
-  FaGithub,
-  FaFacebook,
-  FaInstagram,
-  FaDiscord,
-} from "react-icons/fa";
-import { useState } from "react";
 
 export const PageNotFound = () => {
   return (
+    // FRAMERMOTION
     <AnimatedPage>
       <>
         <div className="h-screen w-screen flex justify-center items-center text-5xl text-gray-100 font-bold">
