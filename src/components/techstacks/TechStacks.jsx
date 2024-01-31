@@ -7,18 +7,18 @@ import { Autoplay } from "swiper/modules";
 import "./styleswiper.css";
 
 // LANGUAGE IMAGES
-import Bootstrap from "../../assets/bootstrap.png";
-import Express from "../../assets/express.png";
-import Github from "../../assets/github.png";
-import Laravel from "../../assets/laravel.png";
-import Mongodb from "../../assets/mongdb.png";
-import Nodejs from "../../assets/nodejs.png";
-import Php from "../../assets/phpphp.png";
-import Reactlogo from "../../assets/react.png";
-import Tailwind from "../../assets/tailwind.png";
-import html from "../../assets/html.png";
-import css from "../../assets/css.png";
-import javascript from "../../assets/javascript.png";
+import Bootstrap from "../../assets/techstacks_img/bootstrap.png";
+import Express from "../../assets/techstacks_img/express.png";
+import Github from "../../assets/techstacks_img/github.png";
+import Laravel from "../../assets/techstacks_img/laravel.png";
+import Mongodb from "../../assets/techstacks_img/mongdb.png";
+import Nodejs from "../../assets/techstacks_img/nodejs.png";
+import Php from "../../assets/techstacks_img/phpphp.png";
+import Reactlogo from "../../assets/techstacks_img/react.png";
+import Tailwind from "../../assets/techstacks_img/tailwind.png";
+import html from "../../assets/techstacks_img/html.png";
+import css from "../../assets/techstacks_img/css.png";
+import javascript from "../../assets/techstacks_img/javascript.png";
 
 export const TechStacks = () => {
   // LANGUAGES

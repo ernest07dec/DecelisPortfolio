@@ -1,19 +1,13 @@
 import React, { useEffect } from "react";
 import { AnimatedPage } from "../../components/framermotion/AnimatedPage";
-import { FaFacebookMessenger } from "react-icons/fa";
-import About1 from "../../assets/about1.jpg";
-import About2 from "../../assets/about2.jpg";
-import About3 from "../../assets/about3.jpg";
-import { useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import About1 from "../../assets/about_img/about1.jpg";
+import About2 from "../../assets/about_img/about2.jpg";
+import About3 from "../../assets/about_img/about3.jpg";
 import EmailForm from "../../components/emailjs/EmailForm";
-
-import AOS from "aos";
 import "aos/dist/aos.css";
 export const About = () => {
   return (
     <AnimatedPage>
-      A
       <div className="max-w-screen-xl mx-auto pt-20">
         <div className="text-gray-200">
           <section className="">
@@ -180,19 +174,6 @@ export const About = () => {
                       look forward to the possibility of working with you and
                       creating exceptional web experiences.
                     </p>
-                  </div>
-                  <div
-                    className="w-full flex justify-center items-center"
-                    data-aos="fade-right"
-                    data-aos-duration="900"
-                  >
-                    <a
-                      href="http://m.me/ernest07dec"
-                      className="text-5xl flex justify-end items-end animate-bounce"
-                      target="_blank"
-                    >
-                      Connect with <FaFacebookMessenger className="ml-5" />
-                    </a>
                   </div>
                 </div>
               </div>

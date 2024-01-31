@@ -33,7 +33,7 @@ export const ProjectShowcase = () => {
     changeDisplay();
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 2000);
   }, [display]);
 
   return (
@@ -56,7 +56,7 @@ export const ProjectShowcase = () => {
                 visible={true}
                 height="80"
                 width="80"
-                color="#4fa94d"
+                color="#5632a8"
                 ariaLabel="grid-loading"
                 radius="12.5"
                 wrapperStyle={{}}

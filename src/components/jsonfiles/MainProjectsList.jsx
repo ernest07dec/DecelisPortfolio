@@ -1,10 +1,10 @@
-import CargoPF from "../../assets/cargopf.png";
-import Nutrichef from "../../assets/nutrichef.png";
-import Cinezone2 from "../../assets/cinezone2pf.png";
-import Kodejobs from "../../assets/kodejobs.png";
-import Cinezone1 from "../../assets/cinezonepf.png";
-import Cargo from "../../assets/cargo1pf.png";
-import NewsGrid from "../../assets/newsgrid.png";
+import CargoPF from "../../assets/projects_img/cargopf.png";
+import Nutrichef from "../../assets/projects_img/nutrichef.png";
+import Cinezone2 from "../../assets/projects_img/cinezone2pf.png";
+import Kodejobs from "../../assets/projects_img/kodejobs.png";
+import Cinezone1 from "../../assets/projects_img/cinezonepf.png";
+import Cargo from "../../assets/projects_img/cargo1pf.png";
+import NewsGrid from "../../assets/projects_img/newsgrid.png";
 
 export const MainProjectsList = [
   {

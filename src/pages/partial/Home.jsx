@@ -6,9 +6,9 @@ import { AnimatedPage } from "../../components/framermotion/AnimatedPage";
 // ICONS
 import { FaPhone, FaFolder, FaUser } from "react-icons/fa";
 // IMAGES AND VIDEO
-import Hero from "../../assets/hero2.mp4";
-import About1 from "../../assets/about1.jpg";
-import About2 from "../../assets/about2.jpg";
+import Hero from "../../assets/home_img/hero2.mp4";
+import About1 from "../../assets/about_img/about1.jpg";
+import About2 from "../../assets/about_img/about2.jpg";
 // ANIMATE ON SCROLL
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -17,19 +17,10 @@ import EmailForm from "../../components/emailjs/EmailForm";
 import { ProjectShowcase } from "../../components/projectsshowcase/ProjectShowcase";
 import { TechStacks } from "../../components/techstacks/TechStacks";
 export const Home = () => {
-  const [scrollTop, setScrollTop] = useState(0);
   useEffect(() => {
     // AOS
     AOS.init();
     // SCROLL EVENT
-    const handleScroll = (event) => {
-      setScrollTop(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll);
-    // CLEARING
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
   }, []);
   // SCROLL REFS
   const projectRef = useRef(null);

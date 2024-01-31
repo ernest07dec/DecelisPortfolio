@@ -3,7 +3,7 @@
 import { Header, Footer } from "./components/header_footer/compiler/index";
 import { AllRoutes } from "./routes/AllRoutes";
 import "./index.css";
-import background from "./assets/bg-4.jpg";
+import background from "./assets/background.jpg";
 
 const App = () => {
   return (

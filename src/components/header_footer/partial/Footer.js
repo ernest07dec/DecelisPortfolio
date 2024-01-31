@@ -45,26 +45,26 @@ export const Footer = () => {
               </div>
             </div>
             <div className="col-span-1 flex justify-center items-end">
-              <div className="text-center text-white">
-                <p className=" py-3 flex gap-5 justify-center text-3xl">
+              <div className="text-center text-white flex flex-col justify-center items-center">
+                <p className=" py-3 flex gap-5 justify-center items-end text-3xl">
                   <a
                     href="https://www.linkedin.com/in/ernest-fortune-decelis-613208262/"
                     target="_blank"
-                    className="hover:animate-bounce"
+                    className="animate duration-200 hover:text-5xl"
                   >
                     <FaLinkedin />
                   </a>
                   <a
                     href="https://github.com/ernest07dec"
                     target="_blank"
-                    className="hover:animate-bounce"
+                    className="animate duration-200 hover:text-5xl"
                   >
                     <FaGithub />
                   </a>
                   <a
                     href="https://facebook.com/ernest07dec/"
                     target="_blank"
-                    className="hover:animate-bounce"
+                    className="animate duration-200 hover:text-5xl"
                   >
                     <FaFacebook />
                   </a>
@@ -72,7 +72,7 @@ export const Footer = () => {
                   <a
                     href="https://www.instagram.com/ernest07dec/"
                     target="_blank"
-                    className="hover:animate-bounce"
+                    className="animate duration-200 hover:text-5xl"
                   >
                     <FaInstagram />
                   </a>

@@ -1,9 +1,9 @@
-import Music from "../../assets/music.png";
-import TicTacToe from "../../assets/tictactoe.png";
-import HTA from "../../assets/hotelta.png";
-import Kodeledger from "../../assets/Kodeledger.png";
-import Koderesto from "../../assets/koderesto.png";
-import Shopping from "../../assets/shoppinglist.png";
+import Music from "../../assets/miniprojects_img/music.png";
+import TicTacToe from "../../assets/miniprojects_img/tictactoe.png";
+import HTA from "../../assets/miniprojects_img/hotelta.png";
+import Kodeledger from "../../assets/miniprojects_img/Kodeledger.png";
+import Koderesto from "../../assets/miniprojects_img/koderesto.png";
+import Shopping from "../../assets/miniprojects_img/shoppinglist.png";
 export const MiniProjectsList = [
   {
     title: "Music Player",
