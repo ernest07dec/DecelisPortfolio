@@ -77,7 +77,7 @@ export const Profile = () => {
         </div>
       </div>
       {/* CODEWARS */}
-      <div className="col-span-9 grid grid-cols-12 border border-indigo-800 p-3 rounded-2xl">
+      <div className="col-span-9 grid grid-cols-12 border mx-10 md:mx-20 lg:mx-0 border-indigo-800 p-3 rounded-2xl">
         <div className="col-span-6 flex flex-col justify-between text-white ml-5">
           {cwProfile ? (
             <>
@@ -95,7 +95,9 @@ export const Profile = () => {
                     <p className="text-gray-300">
                       Username: {cwProfile?.username}
                     </p>
-                    <p className="text-gray-300">Clan: {cwProfile?.clan}</p>
+                    <p className="text-gray-300">
+                      Clan: {cwProfile?.clan.split(" ").join("")}
+                    </p>
                   </div>
                   <h4 className="text-lg font-bold">Statistics:</h4>
                   <p className="text-gray-300">
