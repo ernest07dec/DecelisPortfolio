@@ -119,19 +119,19 @@ export const Header = () => {
                 Projects
               </NavLink>
             </li>
-            {/* <li>
-                <NavLink
-                  to="/playground"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "block py-2 pl-3 pr-4 border-b border-solid"
-                      : "block py-2 pl-3 pr-4 hover:border-b hover:border-solid"
-                  }
-                  onClick={handleNav}
-                >
-                  PlayGround
-                </NavLink>
-              </li> */}
+            <li>
+              <NavLink
+                to="/playground"
+                className={({ isActive }) =>
+                  isActive
+                    ? "block py-2 pl-3 pr-4 border-b border-solid"
+                    : "block py-2 pl-3 pr-4 hover:border-b hover:border-solid"
+                }
+                onClick={handleNav}
+              >
+                PlayGround
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>

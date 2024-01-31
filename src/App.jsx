@@ -9,7 +9,7 @@ const App = () => {
   return (
     // OVERALL BACKGROUND
     <div
-      className="min-h-screen w-full overflow-hidden bg-fixed bg-no-repeat bg-center bg-cover"
+      className="min-h-screen w-full flex flex-col overflow-hidden bg-fixed bg-no-repeat bg-center bg-cover"
       style={{
         backgroundImage: `url(${background})`,
       }}

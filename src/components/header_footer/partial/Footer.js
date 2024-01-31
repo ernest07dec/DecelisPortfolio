@@ -50,6 +50,7 @@ export const Footer = () => {
                   <a
                     href="https://www.linkedin.com/in/ernest-fortune-decelis-613208262/"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="animate duration-200 hover:text-5xl"
                   >
                     <FaLinkedin />
@@ -57,6 +58,7 @@ export const Footer = () => {
                   <a
                     href="https://github.com/ernest07dec"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="animate duration-200 hover:text-5xl"
                   >
                     <FaGithub />
@@ -64,6 +66,7 @@ export const Footer = () => {
                   <a
                     href="https://facebook.com/ernest07dec/"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="animate duration-200 hover:text-5xl"
                   >
                     <FaFacebook />
@@ -72,6 +75,7 @@ export const Footer = () => {
                   <a
                     href="https://www.instagram.com/ernest07dec/"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="animate duration-200 hover:text-5xl"
                   >
                     <FaInstagram />
@@ -87,15 +91,13 @@ export const Footer = () => {
         <hr />
 
         <div className=" border-t border-gray-800 text-center text-white text-sm py-2">
-          <p>
-            Copyright © 2023 | Develop by Ernest | My Portfolio | All Rights
-            Reserved
-          </p>
+          <p>| Ernest | My Portfolio |</p>
         </div>
       </footer>
       <a
         href="http://m.me/ernest07dec"
         target="_blank"
+        rel="noopener noreferrer"
         className="fixed bottom-12 right-24 bg-gray-100 p-3 text-blue-900 rounded-full text-2xl opacity-70 hover:opacity-90 hover:cursor-pointer z-50"
       >
         <FaFacebookMessenger />
