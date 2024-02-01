@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import CorporateBG from "../../assets/playground_img/frontend_design/corporate-bg.jpg";
 import CorporateBG2 from "../../assets/playground_img/frontend_design/corporate-2nd-bg.jpg";
+import MinimalistBG from "../../assets/playground_img/frontend_design/minimalist-bg.jpg";
 import { FaChevronLeft } from "react-icons/fa";
 import "./screendemo.css";
 export const ScreenDemo = ({ design, palette }) => {
+  const [color, setColor] = useState("indigo");
   const [form, setForm] = useState("signin");
   const [gradient1, setGradient1] = useState("");
   const [gradient2, setGradient2] = useState("");
-  const [color, setColor] = useState("indigo");
   useEffect(() => {
-    console.log(palette);
     setColor(palette);
     switch (design) {
       case "Corporate":
@@ -44,7 +44,7 @@ export const ScreenDemo = ({ design, palette }) => {
         break;
       case "green":
         setGradient1(
-          "linear-gradient(rgba(0, 170, 30, 0.3), rgba(0, 120, 30, 0.3))"
+          "linear-gradient(rgba(0, 100, 30, 0.5), rgba(0, 100, 30, 0.5))"
         );
         setGradient2(
           "linear-gradient(rgba(0, 90, 0, 0.8), rgba(0, 91, 0, 0.8))"
@@ -56,7 +56,7 @@ export const ScreenDemo = ({ design, palette }) => {
         );
 
         setGradient2(
-          "linear-gradient(rgba(0, 0, 170, 0.8), rgba(0, 0, 165, 0.8))"
+          "linear-gradient(rgba(0, 50, 140, 0.8), rgba(0, 50, 145, 0.8))"
         );
         break;
 
@@ -72,19 +72,38 @@ export const ScreenDemo = ({ design, palette }) => {
   }, [design, palette]);
   return (
     <div
-      className={`w-full h-full flex py-20 justify-start md:justify-center items-center overflow-y-auto md:overflow-hidden`}
+      className={`w-full h-full flex justify-start md:justify-center items-center overflow-y-auto md:overflow-hidden ${
+        design === "Corporate" && "py-20 md:px-10 lg:px-40 px-5"
+      } ${design === "Minimalist" && "minimalist"} ${
+        design === "Vintage" && ""
+      } ${design === "Illustrative" && ""}`}
       style={{
-        backgroundImage: `${gradient1}, url(${CorporateBG})`,
+        backgroundImage:
+          design === "Corporate"
+            ? `${gradient1}, url(${CorporateBG})`
+            : design === "Minimalist"
+            ? `url(${MinimalistBG})`
+            : "",
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="md:mx-10 h-full lg:mx-40 mx-5 flex flex-col md:grid grid-cols-12 ">
+      <div className=" h-full flex flex-col md:grid grid-cols-12 ">
         <div
-          className="col-span-8 h-full text-white p-10 md:p-16 flex flex-col justify-center rounded-t-3xl md:rounded-r-none md:rounded-l-3xl gap-5"
+          className={`col-span-8 h-full p-10 md:p-16 flex flex-col justify-center gap-5 ${
+            design === "Corporate" &&
+            "rounded-t-3xl md:rounded-r-none md:rounded-l-3xl text-white "
+          } ${design === "Minimalist" && ""} ${design === "Vintage" && ""} ${
+            design === "Illustrative" && ""
+          }`}
           style={{
-            backgroundImage: `${gradient2}, url(${CorporateBG2})`,
+            backgroundImage:
+              design === "Corporate"
+                ? `${gradient2}, url(${CorporateBG2})`
+                : design === "Minimalist"
+                ? ``
+                : "",
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -97,7 +116,14 @@ export const ScreenDemo = ({ design, palette }) => {
             desire. Have a great day ahead!
           </p>
         </div>
-        <div className="col-span-4 h-full bg-white p-20 md:p-6 lg:p-88 flex flex-col md:h-full justify-around rounded-b-3xl md:rounded-r-3xl md:rounded-l-none">
+        <div
+          className={`col-span-4 h-full p-20 md:p-6 lg:p-88 flex flex-col md:h-full justify-around ${
+            design === "Corporate" &&
+            "bg-white rounded-b-3xl md:rounded-r-3xl md:rounded-l-none"
+          } ${design === "Minimalist" && ""} ${design === "Vintage" && ""} ${
+            design === "Illustrative" && ""
+          }`}
+        >
           {form === "signin" && (
             <form
               onSubmit={(e) => {
@@ -127,7 +153,7 @@ export const ScreenDemo = ({ design, palette }) => {
                   type="text"
                   id="username"
                   name="username"
-                  className="w-full px-3 py-2 border rounded focus:outline-none focus:border-indigo-500"
+                  className={`w-full px-3 py-2 border rounded focus:outline-none focus:border-${color}-500`}
                   placeholder="Enter your username"
                 />
               </div>
@@ -142,7 +168,7 @@ export const ScreenDemo = ({ design, palette }) => {
                   type="password"
                   id="password"
                   name="password"
-                  className="w-full px-3 py-2 border rounded focus:outline-none focus:border-indigo-500"
+                  className={`w-full px-3 py-2 border rounded focus:outline-none focus:border-${color}-500`}
                   placeholder="Enter your password"
                 />
               </div>
@@ -200,7 +226,7 @@ export const ScreenDemo = ({ design, palette }) => {
                     type="text"
                     id="email"
                     name="email"
-                    className="w-full px-3 py-2 border rounded focus:outline-none focus:border-indigo-500"
+                    className={`w-full px-3 py-2 border rounded focus:outline-none focus:border-${color}-500`}
                     placeholder="Enter your email"
                   />
                 </div>
@@ -215,7 +241,7 @@ export const ScreenDemo = ({ design, palette }) => {
                     type="text"
                     id="username"
                     name="username"
-                    className="w-full px-3 py-2 border rounded focus:outline-none focus:border-indigo-500"
+                    className={`w-full px-3 py-2 border rounded focus:outline-none focus:border-${color}-500`}
                     placeholder="Enter your username"
                   />
                 </div>
@@ -230,7 +256,7 @@ export const ScreenDemo = ({ design, palette }) => {
                     type="password"
                     id="password"
                     name="password"
-                    className="w-full px-3 py-2 border rounded focus:outline-none focus:border-indigo-500"
+                    className={`w-full px-3 py-2 border rounded focus:outline-none focus:border-${color}-500`}
                     placeholder="Enter your password"
                   />
                 </div>
@@ -245,7 +271,7 @@ export const ScreenDemo = ({ design, palette }) => {
                     type="password"
                     id="confirmpassword"
                     name="confirmpassword"
-                    className="w-full px-3 py-2 border rounded focus:outline-none focus:border-indigo-500"
+                    className={`w-full px-3 py-2 border rounded focus:outline-none focus:border-${color}-500`}
                     placeholder="Confirm your password"
                   />
                 </div>
