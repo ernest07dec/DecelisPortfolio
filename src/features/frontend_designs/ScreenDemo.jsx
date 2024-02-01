@@ -91,12 +91,12 @@ export const ScreenDemo = ({ design, palette }) => {
     >
       <div className=" h-full flex flex-col md:grid grid-cols-12 ">
         <div
-          className={`col-span-8 h-full p-10 md:p-16 flex flex-col justify-center gap-5 ${
+          className={`col-span-8 h-full p-10 md:p-16 flex flex-col gap-5 ${
             design === "Corporate" &&
-            "rounded-t-3xl md:rounded-r-none md:rounded-l-3xl text-white "
-          } ${design === "Minimalist" && ""} ${design === "Vintage" && ""} ${
-            design === "Illustrative" && ""
-          }`}
+            "rounded-t-3xl md:rounded-r-none md:rounded-l-3xl text-white justify-center"
+          } ${design === "Minimalist" && `text-${color}-900`} ${
+            design === "Vintage" && ""
+          } ${design === "Illustrative" && ""}`}
           style={{
             backgroundImage:
               design === "Corporate"
@@ -180,7 +180,20 @@ export const ScreenDemo = ({ design, palette }) => {
               <div className="w-full flex justify-center">
                 <button
                   type="submit"
-                  className={`bg-${color}-500 text-white py-2 px-8 rounded focus:outline-none animate duration-300 hover:px-9 hover:font-semibold  hover:shadow-xl`}
+                  className={`text-white py-2 px-8 rounded focus:outline-none animate duration-300 hover:px-9 hover:font-semibold  hover:shadow-xl`}
+                  style={{
+                    backgroundColor: `${
+                      color === "indigo"
+                        ? "rgb(99 102 241)"
+                        : color === "green"
+                        ? "rgb(34 197 94)"
+                        : color === "red"
+                        ? "rgb(239 68 68)"
+                        : color === "blue"
+                        ? "rgb(29 78 216)"
+                        : "rgb(99 102 241)"
+                    }`,
+                  }}
                 >
                   Sign In
                 </button>
@@ -278,9 +291,22 @@ export const ScreenDemo = ({ design, palette }) => {
                 <div className="w-full flex justify-center mt-4">
                   <button
                     type="submit"
-                    className={`bg-${color}-500 text-white py-2 px-8 rounded focus:outline-none animate duration-300 hover:px-9 hover:font-semibold  hover:shadow-xl`}
+                    className={`text-white py-2 px-8 rounded focus:outline-none animate duration-300 hover:px-9 hover:font-semibold  hover:shadow-xl`}
+                    style={{
+                      backgroundColor: `${
+                        color === "indigo"
+                          ? "rgb(99 102 241)"
+                          : color === "green"
+                          ? "rgb(34 197 94)"
+                          : color === "red"
+                          ? "rgb(239 68 68)"
+                          : color === "blue"
+                          ? "rgb(29 78 216)"
+                          : "rgb(99 102 241)"
+                      }`,
+                    }}
                   >
-                    {form === "signin" ? "Sign In" : "Register"}
+                    Register
                   </button>
                 </div>
               </form>
