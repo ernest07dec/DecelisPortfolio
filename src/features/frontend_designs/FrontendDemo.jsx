@@ -3,7 +3,7 @@ import { ScreenDemo } from "./ScreenDemo";
 
 export const FrontendDemo = () => {
   const [design, setDesign] = useState("Corporate");
-  const [palette, setPalette] = useState("Corporate");
+  const [palette, setPalette] = useState("indigo");
   const tabs = ["Corporate", "Minimalist", "Vintage", "Illustrative"];
   const colors = ["indigo", "red", "green", "blue"];
   return (
@@ -17,7 +17,9 @@ export const FrontendDemo = () => {
           {tabs.map((tab, index) => {
             return (
               <li
-                className="text-gray-900 font-semibold bg-gray-400 px-2 py-2 rounded-t-lg hover:cursor-pointer animate duration-300 hover:py-3 hover:bg-gray-200"
+                className={`text-gray-900 font-semibold px-2 rounded-t-lg hover:cursor-pointer animate duration-300 hover:py-3 hover:bg-gray-200 ${
+                  design === tab ? "py-4 bg-gray-200" : "py-2 bg-gray-400"
+                }`}
                 key={index}
                 onClick={() => {
                   setDesign(tab);
@@ -34,7 +36,9 @@ export const FrontendDemo = () => {
             return (
               <li
                 key={index}
-                className={`bg-${color}-700 px-4 py-5 rounded-t-lg hover:cursor-pointer animate duration-300 hover:py-3 hover:bg-${color}-900`}
+                className={`bg-${color}-700 px-4 rounded-t-lg hover:cursor-pointer animate duration-300 hover:py-3 hover:bg-${color}-900 ${
+                  palette === color ? "py-2" : "py-5"
+                }`}
                 onClick={() => {
                   setPalette(color);
                 }}

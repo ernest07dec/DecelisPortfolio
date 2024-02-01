@@ -9,6 +9,7 @@ export const ScreenDemo = ({ design, palette }) => {
   const [gradient2, setGradient2] = useState("");
   const [color, setColor] = useState("indigo");
   useEffect(() => {
+    console.log(palette);
     setColor(palette);
     switch (design) {
       case "Corporate":
@@ -71,7 +72,7 @@ export const ScreenDemo = ({ design, palette }) => {
   }, [design, palette]);
   return (
     <div
-      className={`w-full h-full flex py-20 justify-center items-center`}
+      className={`w-full h-full flex py-20 justify-start md:justify-center items-center overflow-y-auto md:overflow-hidden`}
       style={{
         backgroundImage: `${gradient1}, url(${CorporateBG})`,
         backgroundPosition: "center",
@@ -79,9 +80,9 @@ export const ScreenDemo = ({ design, palette }) => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="h-full w-full mx-40 grid grid-cols-12 rounded-xl overflow-hidden">
+      <div className="md:mx-10 h-full lg:mx-40 mx-5 flex flex-col md:grid grid-cols-12 ">
         <div
-          className="col-span-8 text-white p-16 flex flex-col justify-center gap-5"
+          className="col-span-8 h-full text-white p-10 md:p-16 flex flex-col justify-center rounded-t-3xl md:rounded-r-none md:rounded-l-3xl gap-5"
           style={{
             backgroundImage: `${gradient2}, url(${CorporateBG2})`,
             backgroundPosition: "center",
@@ -96,7 +97,7 @@ export const ScreenDemo = ({ design, palette }) => {
             desire. Have a great day ahead!
           </p>
         </div>
-        <div className="col-span-4 bg-white p-8 flex flex-col h-full justify-around">
+        <div className="col-span-4 h-full bg-white p-20 md:p-6 lg:p-88 flex flex-col md:h-full justify-around rounded-b-3xl md:rounded-r-3xl md:rounded-l-none">
           {form === "signin" && (
             <form
               onSubmit={(e) => {
