@@ -86,9 +86,8 @@ export const ScreenDemo = ({ design, palette }) => {
         design === "Minimalist" &&
         `py-24 md:py-0 font-minimalist text-${color}-900`
       } ${
-        design === "Vintage" &&
-        "py-20 md:px-5 lg:px-20 px-5 text-white font-vintage"
-      } ${design === "Illustrative" && ""}`}
+        design === "Vintage" && "py-20 md:px-5 lg:px-20 text-white font-vintage"
+      } `}
       style={{
         backgroundImage:
           design === "Corporate"
@@ -108,7 +107,7 @@ export const ScreenDemo = ({ design, palette }) => {
           design === "Corporate" && "flex flex-col md:grid grid-cols-12"
         } ${design === "Minimalist" && `flex flex-col lg:grid grid-cols-12`} ${
           design === "Vintage" && "flex flex-col md:grid grid-cols-12"
-        } ${design === "Illustrative" && ""}`}
+        } `}
       >
         <div
           className={`col-span-8 p-10 md:p-16 flex flex-col gap-5 ${
@@ -116,7 +115,7 @@ export const ScreenDemo = ({ design, palette }) => {
             "h-full rounded-t-3xl md:rounded-r-none md:rounded-l-3xl text-white justify-center"
           } ${design === "Minimalist" && `text-center md:text-left`} ${
             design === "Vintage" && ""
-          } ${design === "Illustrative" && ""}`}
+          } `}
           style={{
             backgroundImage:
               design === "Corporate"
@@ -145,8 +144,8 @@ export const ScreenDemo = ({ design, palette }) => {
             design === "Corporate" &&
             " h-full bg-white rounded-b-3xl md:rounded-r-3xl md:rounded-l-none p-20 md:p-5 lg:p-8"
           } ${design === "Minimalist" && "pt-5 pb-16 px-20 md:px-36 lg:p-8"} ${
-            design === "Vintage" && ""
-          } ${design === "Illustrative" && ""}`}
+            design === "Vintage" && " p-20 md:p-0 lg:p-8"
+          } `}
         >
           {form === "signin" && (
             <form

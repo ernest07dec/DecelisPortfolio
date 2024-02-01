@@ -4,7 +4,7 @@ import { ScreenDemo } from "./ScreenDemo";
 export const FrontendDemo = () => {
   const [design, setDesign] = useState("Corporate");
   const [palette, setPalette] = useState("indigo");
-  const tabs = ["Corporate", "Minimalist", "Vintage", "Illustrative"];
+  const tabs = ["Corporate", "Minimalist", "Vintage"];
   const colors = ["indigo", "red", "green", "blue"];
   return (
     <section className="max-w-screen-xl mx-auto mt-20 lg:px-0 px-5 sm:px-10">
