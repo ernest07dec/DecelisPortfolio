@@ -9,6 +9,7 @@ export const ScreenDemo = ({ design, palette }) => {
   const [form, setForm] = useState("signin");
   const [gradient1, setGradient1] = useState("");
   const [gradient2, setGradient2] = useState("");
+  const [minimalistGradient, setMinimalistGradient] = useState("");
   useEffect(() => {
     setColor(palette);
     switch (design) {
@@ -32,6 +33,7 @@ export const ScreenDemo = ({ design, palette }) => {
         setGradient2(
           "linear-gradient(rgba(0, 9, 109, 0.8), rgba(0, 0, 109, 0.8))"
         );
+        setMinimalistGradient("rgba(0, 0, 90, 0.2)");
         break;
       case "red":
         setGradient1(
@@ -40,6 +42,7 @@ export const ScreenDemo = ({ design, palette }) => {
         setGradient2(
           "linear-gradient(rgba(100, 0, 0, 0.8), rgba(100, 0, 0, 0.8))"
         );
+        setMinimalistGradient("rgba(90, 0, 0, 0.2)");
 
         break;
       case "green":
@@ -49,6 +52,7 @@ export const ScreenDemo = ({ design, palette }) => {
         setGradient2(
           "linear-gradient(rgba(0, 90, 0, 0.8), rgba(0, 91, 0, 0.8))"
         );
+        setMinimalistGradient("rgba(0, 95, 0, 0.2)");
         break;
       case "blue":
         setGradient1(
@@ -58,6 +62,7 @@ export const ScreenDemo = ({ design, palette }) => {
         setGradient2(
           "linear-gradient(rgba(0, 50, 140, 0.8), rgba(0, 50, 145, 0.8))"
         );
+        setMinimalistGradient("rgba(0, 30, 100, 0.3)");
         break;
 
       default:
@@ -67,34 +72,42 @@ export const ScreenDemo = ({ design, palette }) => {
         setGradient2(
           "linear-gradient(rgba(0, 9, 99, 0.8), rgba(0, 0, 99, 0.8))"
         );
+        setMinimalistGradient("rgba(0, 0, 60, 0.2)");
         break;
     }
   }, [design, palette]);
   return (
     <div
-      className={`w-full h-full flex justify-start md:justify-center items-center overflow-y-auto md:overflow-hidden ${
+      className={`w-full h-full flex justify-start md:justify-center items-center overflow-y-auto lg:overflow-hidden ${
         design === "Corporate" && "py-20 md:px-10 lg:px-40 px-5"
-      } ${design === "Minimalist" && "minimalist"} ${
-        design === "Vintage" && ""
-      } ${design === "Illustrative" && ""}`}
+      } ${
+        design === "Minimalist" &&
+        `py-24 md:py-0 font-minimalist text-${color}-900`
+      } ${design === "Vintage" && ""} ${design === "Illustrative" && ""}`}
       style={{
         backgroundImage:
           design === "Corporate"
             ? `${gradient1}, url(${CorporateBG})`
             : design === "Minimalist"
-            ? `url(${MinimalistBG})`
+            ? `linear-gradient(to right, transparent, ${minimalistGradient}), url(${MinimalistBG})`
             : "",
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className=" h-full flex flex-col md:grid grid-cols-12 ">
+      <div
+        className={`h-full ${
+          design === "Corporate" && "flex flex-col md:grid grid-cols-12"
+        } ${design === "Minimalist" && `flex flex-col lg:grid grid-cols-12`} ${
+          design === "Vintage" && ""
+        } ${design === "Illustrative" && ""}`}
+      >
         <div
-          className={`col-span-8 h-full p-10 md:p-16 flex flex-col gap-5 ${
+          className={`col-span-8 p-10 md:p-16 flex flex-col gap-5 ${
             design === "Corporate" &&
-            "rounded-t-3xl md:rounded-r-none md:rounded-l-3xl text-white justify-center"
-          } ${design === "Minimalist" && `text-${color}-900`} ${
+            "h-full rounded-t-3xl md:rounded-r-none md:rounded-l-3xl text-white justify-center"
+          } ${design === "Minimalist" && `text-center md:text-left`} ${
             design === "Vintage" && ""
           } ${design === "Illustrative" && ""}`}
           style={{
@@ -117,12 +130,12 @@ export const ScreenDemo = ({ design, palette }) => {
           </p>
         </div>
         <div
-          className={`col-span-4 h-full p-20 md:p-6 lg:p-88 flex flex-col md:h-full justify-around ${
+          className={`col-span-4 flex flex-col justify-center ${
             design === "Corporate" &&
-            "bg-white rounded-b-3xl md:rounded-r-3xl md:rounded-l-none"
-          } ${design === "Minimalist" && ""} ${design === "Vintage" && ""} ${
-            design === "Illustrative" && ""
-          }`}
+            " h-full bg-white rounded-b-3xl md:rounded-r-3xl md:rounded-l-none p-20 md:p-5 lg:p-8"
+          } ${design === "Minimalist" && "pt-5 pb-16 px-20 md:px-36 lg:p-8"} ${
+            design === "Vintage" && ""
+          } ${design === "Illustrative" && ""}`}
         >
           {form === "signin" && (
             <form
@@ -180,18 +193,43 @@ export const ScreenDemo = ({ design, palette }) => {
               <div className="w-full flex justify-center">
                 <button
                   type="submit"
-                  className={`text-white py-2 px-8 rounded focus:outline-none animate duration-300 hover:px-9 hover:font-semibold  hover:shadow-xl`}
+                  className={` py-2 px-8 focus:outline-none ${
+                    design === "Corporate"
+                      ? `text-white rounded animate duration-300 hover:px-9 hover:font-semibold  hover:shadow-xl `
+                      : ""
+                  }${
+                    design === "Minimalist"
+                      ? `border-2 text-${color}-800 font-semibold  hover:text-gray-800 hover:border-4 h-12`
+                      : ""
+                  }`}
                   style={{
                     backgroundColor: `${
-                      color === "indigo"
-                        ? "rgb(99 102 241)"
-                        : color === "green"
-                        ? "rgb(34 197 94)"
-                        : color === "red"
-                        ? "rgb(239 68 68)"
-                        : color === "blue"
-                        ? "rgb(29 78 216)"
-                        : "rgb(99 102 241)"
+                      design === "Corporate"
+                        ? color === "indigo"
+                          ? "rgb(99 102 241)"
+                          : color === "green"
+                          ? "rgb(34 197 94)"
+                          : color === "red"
+                          ? "rgb(239 68 68)"
+                          : color === "blue"
+                          ? "rgb(29 78 216)"
+                          : "rgb(99 102 241)"
+                        : design === "Minimalist"
+                        ? ""
+                        : ""
+                    }`,
+                    borderColor: `${
+                      design === "Minimalist"
+                        ? color === "indigo"
+                          ? "rgb(99 102 241)"
+                          : color === "green"
+                          ? "rgb(34 197 94)"
+                          : color === "red"
+                          ? "rgb(239 68 68)"
+                          : color === "blue"
+                          ? "rgb(29 78 216)"
+                          : "rgb(99 102 241)"
+                        : ""
                     }`,
                   }}
                 >
@@ -219,15 +257,7 @@ export const ScreenDemo = ({ design, palette }) => {
                 <h2 className="text-3xl text-center font-semibold mb-4">
                   Sign Up
                 </h2>
-                <p className="mb-1">
-                  Didn't have account?{" "}
-                  <span
-                    className="text-blue-700 hover:underline hover:cursor-pointer"
-                    onClick={() => setForm("signup")}
-                  >
-                    Register
-                  </span>
-                </p>
+
                 <div className="">
                   <label
                     htmlFor="username"
@@ -291,18 +321,43 @@ export const ScreenDemo = ({ design, palette }) => {
                 <div className="w-full flex justify-center mt-4">
                   <button
                     type="submit"
-                    className={`text-white py-2 px-8 rounded focus:outline-none animate duration-300 hover:px-9 hover:font-semibold  hover:shadow-xl`}
+                    className={` py-2 px-8 focus:outline-none ${
+                      design === "Corporate"
+                        ? `text-white rounded animate duration-300 hover:px-9 hover:font-semibold  hover:shadow-xl `
+                        : ""
+                    }${
+                      design === "Minimalist"
+                        ? `border-2 text-${color}-800 font-semibold  hover:text-gray-800 hover:border-4 h-12`
+                        : ""
+                    }`}
                     style={{
                       backgroundColor: `${
-                        color === "indigo"
-                          ? "rgb(99 102 241)"
-                          : color === "green"
-                          ? "rgb(34 197 94)"
-                          : color === "red"
-                          ? "rgb(239 68 68)"
-                          : color === "blue"
-                          ? "rgb(29 78 216)"
-                          : "rgb(99 102 241)"
+                        design === "Corporate"
+                          ? color === "indigo"
+                            ? "rgb(99 102 241)"
+                            : color === "green"
+                            ? "rgb(34 197 94)"
+                            : color === "red"
+                            ? "rgb(239 68 68)"
+                            : color === "blue"
+                            ? "rgb(29 78 216)"
+                            : "rgb(99 102 241)"
+                          : design === "Minimalist"
+                          ? ""
+                          : ""
+                      }`,
+                      borderColor: `${
+                        design === "Minimalist"
+                          ? color === "indigo"
+                            ? "rgb(99 102 241)"
+                            : color === "green"
+                            ? "rgb(34 197 94)"
+                            : color === "red"
+                            ? "rgb(239 68 68)"
+                            : color === "blue"
+                            ? "rgb(29 78 216)"
+                            : "rgb(99 102 241)"
+                          : ""
                       }`,
                     }}
                   >
