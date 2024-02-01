@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import CorporateBG from "../../assets/playground_img/frontend_design/corporate-bg.jpg";
 import CorporateBG2 from "../../assets/playground_img/frontend_design/corporate-2nd-bg.jpg";
 import MinimalistBG from "../../assets/playground_img/frontend_design/minimalist-bg.jpg";
+import VintageBG from "../../assets/playground_img/frontend_design/vintage-bg.jpg";
 import { FaChevronLeft } from "react-icons/fa";
 import "./screendemo.css";
+import { BTN } from "./components/BTN";
 export const ScreenDemo = ({ design, palette }) => {
   const [color, setColor] = useState("indigo");
   const [form, setForm] = useState("signin");
@@ -83,13 +85,18 @@ export const ScreenDemo = ({ design, palette }) => {
       } ${
         design === "Minimalist" &&
         `py-24 md:py-0 font-minimalist text-${color}-900`
-      } ${design === "Vintage" && ""} ${design === "Illustrative" && ""}`}
+      } ${
+        design === "Vintage" &&
+        "py-20 md:px-5 lg:px-20 px-5 text-white font-vintage"
+      } ${design === "Illustrative" && ""}`}
       style={{
         backgroundImage:
           design === "Corporate"
             ? `${gradient1}, url(${CorporateBG})`
             : design === "Minimalist"
             ? `linear-gradient(to right, transparent, ${minimalistGradient}), url(${MinimalistBG})`
+            : design === "Vintage"
+            ? `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${VintageBG})`
             : "",
         backgroundPosition: "center",
         backgroundSize: "cover",
@@ -100,7 +107,7 @@ export const ScreenDemo = ({ design, palette }) => {
         className={`h-full ${
           design === "Corporate" && "flex flex-col md:grid grid-cols-12"
         } ${design === "Minimalist" && `flex flex-col lg:grid grid-cols-12`} ${
-          design === "Vintage" && ""
+          design === "Vintage" && "flex flex-col md:grid grid-cols-12"
         } ${design === "Illustrative" && ""}`}
       >
         <div
@@ -122,7 +129,11 @@ export const ScreenDemo = ({ design, palette }) => {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <h3 className="text-5xl">Welcome!</h3>
+          <h3
+            className={`${design === "Vintage" ? "text-[70px]" : "text-5xl"}`}
+          >
+            Welcome!
+          </h3>
           <p className="text-xl">This is a frontend designs demo.</p>
           <p className="text-xl">
             Feel free to explore and click the designs and colors that you
@@ -142,24 +153,28 @@ export const ScreenDemo = ({ design, palette }) => {
               onSubmit={(e) => {
                 e.preventDefault();
               }}
+              className={design === "Vintage" ? "text-lg" : "text-base"}
             >
-              <h2 className="text-3xl text-center font-semibold mb-4">
+              <h2
+                className={`${
+                  design !== "Vintage" ? "text-3xl" : "text-5xl"
+                } text-center font-semibold mb-4`}
+              >
                 Sign In
               </h2>
               <p className="mb-4">
                 Didn't have account?{" "}
                 <span
-                  className="text-blue-700 hover:underline hover:cursor-pointer"
+                  className={`${
+                    design === "Vintage" ? "italic" : "text-blue-700"
+                  } hover:underline hover:cursor-pointer`}
                   onClick={() => setForm("signup")}
                 >
                   Register
                 </span>
               </p>
               <div className="mb-4">
-                <label
-                  htmlFor="username"
-                  className="block text-gray-600 text-sm font-medium mb-1"
-                >
+                <label htmlFor="username" className="block  mb-1">
                   Username
                 </label>
                 <input
@@ -171,10 +186,7 @@ export const ScreenDemo = ({ design, palette }) => {
                 />
               </div>
               <div>
-                <label
-                  htmlFor="password"
-                  className="block text-gray-600 text-sm font-medium mb-1"
-                >
+                <label htmlFor="password" className="block mb-1">
                   Password
                 </label>
                 <input
@@ -186,7 +198,11 @@ export const ScreenDemo = ({ design, palette }) => {
                 />
               </div>
               <div className="mb-4 mt-1 w-full flex justify-end">
-                <span className="text-blue-700 text-sm hover:underline hover:cursor-pointer">
+                <span
+                  className={`${
+                    design === "Vintage" ? "italic" : "text-blue-700"
+                  } hover:underline hover:cursor-pointer`}
+                >
                   Forgot Password?
                 </span>
               </div>
@@ -199,7 +215,11 @@ export const ScreenDemo = ({ design, palette }) => {
                       : ""
                   }${
                     design === "Minimalist"
-                      ? `border-2 text-${color}-800 font-semibold  hover:text-gray-800 hover:border-4 h-12`
+                      ? `border-2 text-${color}-800 font-semibold hover:text-gray-800 hover:border-4 h-12`
+                      : ""
+                  }${
+                    design === "Vintage"
+                      ? ` font-semibold text-2xl hover:text-gray-300 text-gray-100 underline hover:no-underline h-12`
                       : ""
                   }`}
                   style={{
@@ -259,10 +279,7 @@ export const ScreenDemo = ({ design, palette }) => {
                 </h2>
 
                 <div className="">
-                  <label
-                    htmlFor="username"
-                    className="block text-gray-600 text-sm font-medium mb-1"
-                  >
+                  <label htmlFor="username" className="block mb-1">
                     Email
                   </label>
                   <input
@@ -274,10 +291,7 @@ export const ScreenDemo = ({ design, palette }) => {
                   />
                 </div>
                 <div className="">
-                  <label
-                    htmlFor="username"
-                    className="block text-gray-600 text-sm font-medium mb-1"
-                  >
+                  <label htmlFor="username" className="block mb-1">
                     Username
                   </label>
                   <input
@@ -289,10 +303,7 @@ export const ScreenDemo = ({ design, palette }) => {
                   />
                 </div>
                 <div>
-                  <label
-                    htmlFor="password"
-                    className="block text-gray-600 text-sm font-medium mb-1"
-                  >
+                  <label htmlFor="password" className="block mb-1">
                     Password
                   </label>
                   <input
@@ -304,10 +315,7 @@ export const ScreenDemo = ({ design, palette }) => {
                   />
                 </div>
                 <div>
-                  <label
-                    htmlFor="password"
-                    className="block text-gray-600 text-sm font-medium mb-1"
-                  >
+                  <label htmlFor="password" className="block mb-1">
                     Confirm Password
                   </label>
                   <input
@@ -319,50 +327,7 @@ export const ScreenDemo = ({ design, palette }) => {
                   />
                 </div>
                 <div className="w-full flex justify-center mt-4">
-                  <button
-                    type="submit"
-                    className={` py-2 px-8 focus:outline-none ${
-                      design === "Corporate"
-                        ? `text-white rounded animate duration-300 hover:px-9 hover:font-semibold  hover:shadow-xl `
-                        : ""
-                    }${
-                      design === "Minimalist"
-                        ? `border-2 text-${color}-800 font-semibold  hover:text-gray-800 hover:border-4 h-12`
-                        : ""
-                    }`}
-                    style={{
-                      backgroundColor: `${
-                        design === "Corporate"
-                          ? color === "indigo"
-                            ? "rgb(99 102 241)"
-                            : color === "green"
-                            ? "rgb(34 197 94)"
-                            : color === "red"
-                            ? "rgb(239 68 68)"
-                            : color === "blue"
-                            ? "rgb(29 78 216)"
-                            : "rgb(99 102 241)"
-                          : design === "Minimalist"
-                          ? ""
-                          : ""
-                      }`,
-                      borderColor: `${
-                        design === "Minimalist"
-                          ? color === "indigo"
-                            ? "rgb(99 102 241)"
-                            : color === "green"
-                            ? "rgb(34 197 94)"
-                            : color === "red"
-                            ? "rgb(239 68 68)"
-                            : color === "blue"
-                            ? "rgb(29 78 216)"
-                            : "rgb(99 102 241)"
-                          : ""
-                      }`,
-                    }}
-                  >
-                    Register
-                  </button>
+                  <BTN string={"Register"} design={design} color={color} />
                 </div>
               </form>
             </>

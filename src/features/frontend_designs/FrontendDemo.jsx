@@ -31,20 +31,20 @@ export const FrontendDemo = () => {
           })}
         </ul>
         <ul className="flex items-end gap-2">
-          <li className="text-white font-medium text-lg">Colors:</li>
-          {colors.map((color, index) => {
-            return (
-              <li
-                key={index}
-                className={`bg-${color}-700 px-4 rounded-t-lg hover:cursor-pointer animate duration-300 hover:py-3 hover:bg-${color}-900 ${
-                  palette === color ? "py-2" : "py-5"
-                }`}
-                onClick={() => {
-                  setPalette(color);
-                }}
-              ></li>
-            );
-          })}
+          {design !== "Vintage" &&
+            colors.map((color, index) => {
+              return (
+                <li
+                  key={index}
+                  className={`bg-${color}-700 px-4 rounded-t-lg hover:cursor-pointer animate duration-300 hover:py-3 hover:bg-${color}-900 ${
+                    palette === color ? "py-2" : "py-5"
+                  }`}
+                  onClick={() => {
+                    setPalette(color);
+                  }}
+                ></li>
+              );
+            })}
         </ul>
       </div>
       <div
