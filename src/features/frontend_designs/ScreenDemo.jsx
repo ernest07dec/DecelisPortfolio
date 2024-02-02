@@ -180,7 +180,7 @@ export const ScreenDemo = ({ design, palette }) => {
                   type="text"
                   id="username"
                   name="username"
-                  className={`w-full px-3 py-2 border rounded focus:outline-none focus:border-${color}-500`}
+                  className={`w-full px-3 py-2 border rounded focus:outline-none focus:border-${color}-500 text-black`}
                   placeholder="Enter your username"
                 />
               </div>
@@ -192,7 +192,7 @@ export const ScreenDemo = ({ design, palette }) => {
                   type="password"
                   id="password"
                   name="password"
-                  className={`w-full px-3 py-2 border rounded focus:outline-none focus:border-${color}-500`}
+                  className={`w-full px-3 py-2 border rounded focus:outline-none focus:border-${color}-500 text-black`}
                   placeholder="Enter your password"
                 />
               </div>
@@ -285,7 +285,7 @@ export const ScreenDemo = ({ design, palette }) => {
                     type="text"
                     id="email"
                     name="email"
-                    className={`w-full px-3 py-2 border rounded focus:outline-none focus:border-${color}-500`}
+                    className={`w-full px-3 py-2 border rounded focus:outline-none focus:border-${color}-500 text-black`}
                     placeholder="Enter your email"
                   />
                 </div>
@@ -297,7 +297,7 @@ export const ScreenDemo = ({ design, palette }) => {
                     type="text"
                     id="username"
                     name="username"
-                    className={`w-full px-3 py-2 border rounded focus:outline-none focus:border-${color}-500`}
+                    className={`w-full px-3 py-2 border rounded focus:outline-none focus:border-${color}-500 text-black`}
                     placeholder="Enter your username"
                   />
                 </div>
@@ -309,7 +309,7 @@ export const ScreenDemo = ({ design, palette }) => {
                     type="password"
                     id="password"
                     name="password"
-                    className={`w-full px-3 py-2 border rounded focus:outline-none focus:border-${color}-500`}
+                    className={`w-full px-3 py-2 border rounded focus:outline-none focus:border-${color}-500 text-black`}
                     placeholder="Enter your password"
                   />
                 </div>
@@ -321,7 +321,7 @@ export const ScreenDemo = ({ design, palette }) => {
                     type="password"
                     id="confirmpassword"
                     name="confirmpassword"
-                    className={`w-full px-3 py-2 border rounded focus:outline-none focus:border-${color}-500`}
+                    className={`w-full px-3 py-2 border rounded focus:outline-none focus:border-${color}-500 text-black`}
                     placeholder="Confirm your password"
                   />
                 </div>
