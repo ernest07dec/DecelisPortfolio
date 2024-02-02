@@ -278,7 +278,7 @@ export const ScreenDemo = ({ design, palette }) => {
                 </h2>
 
                 <div className="">
-                  <label htmlFor="username" className="block mb-1">
+                  <label htmlFor="email" className="block mb-1">
                     Email
                   </label>
                   <input
@@ -314,7 +314,7 @@ export const ScreenDemo = ({ design, palette }) => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="password" className="block mb-1">
+                  <label htmlFor="confirmpassword" className="block mb-1">
                     Confirm Password
                   </label>
                   <input

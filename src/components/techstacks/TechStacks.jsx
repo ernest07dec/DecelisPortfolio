@@ -15,12 +15,13 @@ export const TechStacks = () => {
 
   return (
     <section className="w-screen bg-gray-200 px-10">
+      {/* SWIPER INITIALIZATION */}
       <Swiper
         loop
         initialSlide={loopIndex}
         breakpoints={{
           0: {
-            slidesPerView: 4,
+            slidesPerView: 5,
             slidesPerGroup: 2,
           },
           480: {
@@ -50,6 +51,7 @@ export const TechStacks = () => {
         }}
         modules={[Autoplay]}
       >
+        {/* LANGUAGE MAPPING */}
         {languages.map((language, index) => (
           <SwiperSlide key={index}>
             <div className="flex justify-center items-center rounded-3xl mx-auto p-5 lg:h-44 md:h-36 h-32 lg:w-44 md:w-36 w-32">
