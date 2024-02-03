@@ -98,13 +98,13 @@ export const Footer = () => {
         href="http://m.me/ernest07dec"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-12 right-24 bg-gray-100 p-3 text-blue-900 rounded-full text-2xl opacity-70 hover:opacity-90 hover:cursor-pointer z-50"
+        className="fixed bottom-12 right-24 bg-gray-100 p-3 text-blue-900 rounded-full text-2xl opacity-70 hover:opacity-90 hover:cursor-pointer z-40"
       >
         <FaFacebookMessenger />
       </a>
       {scrollTop >= 500 ? (
         <div
-          className="fixed bottom-12 right-10 bg-gray-100 p-3 text-blue-900 rounded-full text-2xl opacity-70 hover:opacity-90 hover:cursor-pointer z-50"
+          className="fixed bottom-12 right-10 bg-gray-100 p-3 text-blue-900 rounded-full text-2xl opacity-70 hover:opacity-90 hover:cursor-pointer z-40"
           onClick={() => window.scroll(0, 0)}
         >
           <FaArrowUp />
