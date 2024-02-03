@@ -1,16 +1,15 @@
 import { NavLink, Link } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaDownload } from "react-icons/fa";
-import { useEffect, useRef } from "react";
 
 export const Header = () => {
   const [scrollTop, setScrollTop] = useState(0);
-  const [path, setPath] = useState(0);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   useEffect(() => {
-    const handleScroll = (event) => {
+    const handleScroll = () => {
       setScrollTop(window.scrollY);
     };
-    setPath(window.location.pathname);
 
     window.addEventListener("scroll", handleScroll);
 
@@ -18,18 +17,26 @@ export const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   const handleNav = () => {
-    setTimeout(function () {
+    setTimeout(() => {
       window.scrollTo(0, 0);
     }, 500);
+
+    setMobileMenuOpen(false); // Close the mobile menu after clicking a link
   };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <nav
-      className={`fixed w-full z-50 text-white ${
-        scrollTop <= 200
-          ? ""
-          : "bg-indigo-950 border-b border-1 border-gray-800 opacity-80"
-      }`}
+      className={`fixed w-full z-50 ${
+        scrollTop > 200
+          ? "bg-indigo-950 border-b border-1 border-gray-800 opacity-80"
+          : "bg-indigo-950 sm:bg-transparent"
+      } text-white`}
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link to="/" className="flex items-center" onClick={handleNav}>
@@ -41,6 +48,7 @@ export const Header = () => {
           <a
             href="https://drive.google.com/file/d/1FpaQCOyq8fI6w8RlaFozpyxs55keDEdD/view?usp=sharing"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <button
               type="button"
@@ -51,11 +59,9 @@ export const Header = () => {
             </button>
           </a>
           <button
-            data-collapse-toggle="navbar-cta"
             type="button"
+            onClick={toggleMobileMenu}
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-cta"
-            aria-expanded="false"
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -76,7 +82,9 @@ export const Header = () => {
           </button>
         </div>
         <div
-          className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${
+            isMobileMenuOpen ? "block" : "hidden"
+          }`}
           id="navbar-cta"
         >
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 text-center">

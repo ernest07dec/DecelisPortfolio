@@ -5,6 +5,7 @@ import { FrontendDemo } from "../../features/frontend_designs/FrontendDemo";
 import { Profile } from "../../features/profile/Profile";
 
 import { FaChevronCircleRight } from "react-icons/fa";
+import { ChatApp } from "../../features/socketio_demo/ChatApp";
 export const PlayGround = () => {
   const frontendDesignsRef = useRef(null);
   const executeScroll = (ref) => {
@@ -71,6 +72,9 @@ export const PlayGround = () => {
       {/* FRONTEND DEMO */}
       <section className="mt-32" ref={frontendDesignsRef}>
         <FrontendDemo />
+      </section>
+      <section className="mt-32" ref={frontendDesignsRef}>
+        <ChatApp />
       </section>
     </AnimatedPage>
   );
