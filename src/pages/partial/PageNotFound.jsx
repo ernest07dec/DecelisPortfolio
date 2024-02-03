@@ -7,7 +7,7 @@ export const PageNotFound = () => {
     <AnimatedPage>
       <>
         <div className="h-screen w-screen flex justify-center items-center text-5xl text-gray-100 font-bold">
-          <h1>Page Not Found</h1>
+          <h1>Page Not Found 404</h1>
         </div>
       </>
     </AnimatedPage>

@@ -64,7 +64,7 @@ export const Home = () => {
                 <button
                   onClick={() => executeScroll(projectRef.current)}
                   type="button"
-                  className="text-white flex justify-center ring-2 ring-blue-200 hover:ring-4 hover:ring-blue-300 font-medium text-sm px-4 py-2 text-center mr-3 md:mr-0 text-xl z-40"
+                  className="text-white flex justify-center ring-2 ring-blue-200 hover:ring-4 hover:ring-blue-300 font-medium px-4 py-2 text-center mr-3 md:mr-0 text-xl z-40"
                 >
                   Projects
                   <FaFolder className="ml-5 mt-1 text-lg" />
@@ -72,7 +72,7 @@ export const Home = () => {
                 <button
                   onClick={() => executeScroll(aboutRef.current)}
                   type="button"
-                  className=" justify-center flex ring-2 ring-blue-200 hover:ring-4 hover:ring-blue-300 font-medium text-sm px-4 py-2 text-center mr-3 md:mr-0 text-xl z-40"
+                  className=" justify-center flex ring-2 ring-blue-200 hover:ring-4 hover:ring-blue-300 font-medium px-4 py-2 text-center mr-3 md:mr-0 text-xl z-40"
                 >
                   About
                   <FaUser className="ml-5 mt-1 text-lg" />
@@ -80,7 +80,7 @@ export const Home = () => {
                 <button
                   onClick={() => executeScroll(contactRef.current)}
                   type="button"
-                  className=" flex justify-center ring-2 ring-blue-200 hover:ring-4 hover:ring-blue-300 font-medium text-sm px-4 py-2 text-center mr-3 md:mr-0 text-xl z-40"
+                  className=" flex justify-center ring-2 ring-blue-200 hover:ring-4 hover:ring-blue-300 font-medium  px-4 py-2 text-center mr-3 md:mr-0 text-xl z-40"
                 >
                   Contact
                   <FaPhone className="ml-5 mt-1 text-lg" />
@@ -97,9 +97,9 @@ export const Home = () => {
             </video>
           </div>
         </section>
-        <div className="flex hidden md:inline-block justify-center z-40 relative bottom-28 pt-10">
+        <div className="flex md:inline-block justify-center z-40 relative bottom-28 pt-10">
           <div
-            className="bg-gray-950 rounded-full  text-7xl border border-solid border-4 border-indigo-950 py-10 px-16"
+            className="bg-gray-950 rounded-full  text-7xl border-solid border-4 border-indigo-950 py-10 px-16"
             data-aos="zoom-in-up"
           >
             Welcome!
@@ -129,7 +129,7 @@ export const Home = () => {
                     window.scrollTo(0, 0);
                   }, 500)
                 }
-                className="ring-2 ring-blue-200 hover:ring-4 hover:ring-blue-300 font-medium text-sm px-4 py-2 text-center mt-7 md:mr-0 text-lg"
+                className="ring-2 ring-blue-200 hover:ring-4 hover:ring-blue-300 font-medium text-sm px-4 py-2 text-center mt-7 md:mr-0 "
               >
                 See More
               </button>
@@ -176,7 +176,7 @@ export const Home = () => {
                           window.scrollTo(0, 0);
                         }, 500)
                       }
-                      className=" flex ring-2 ring-blue-200 text-lg hover:ring-4 hover:ring-blue-300 font-medium text-sm px-4 py-2 text-center mt-4"
+                      className=" flex ring-2 ring-blue-200  hover:ring-4 hover:ring-blue-300 font-medium text-sm px-4 py-2 text-center mt-4"
                     >
                       See More
                     </button>
