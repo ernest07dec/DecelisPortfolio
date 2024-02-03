@@ -74,7 +74,7 @@ export const ProjectShowcase = () => {
                 data-aos-duration="900"
               />
               <div
-                className={`h-full w-full overflow-hidden rounded-3xl grid-cols-1 px-5 py-10 flex flex-col justify-center grid-cols-1 hover:backdrop-blur-lg hover:backdrop-brightness-50 hover:justify-between ease-in duration-300 z-40 ${
+                className={`h-full w-full overflow-hidden rounded-3xl grid-cols-1 px-5 py-10 flex flex-col justify-center hover:backdrop-blur-lg hover:backdrop-brightness-50 hover:justify-between ease-in duration-300 z-40 ${
                   show ? "" : "hidden"
                 }`}
               >
