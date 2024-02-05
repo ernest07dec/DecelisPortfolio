@@ -73,7 +73,7 @@ export const PlayGround = () => {
       <section className="mt-32" ref={frontendDesignsRef}>
         <FrontendDemo />
       </section>
-      <section className="mt-32" ref={frontendDesignsRef}>
+      <section className="mt-32">
         <ChatApp />
       </section>
     </AnimatedPage>
