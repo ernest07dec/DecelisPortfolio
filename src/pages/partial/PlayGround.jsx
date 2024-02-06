@@ -6,6 +6,7 @@ import { Profile } from "../../features/profile/Profile";
 
 import { FaChevronCircleRight } from "react-icons/fa";
 import { ChatApp } from "../../features/socketio_demo/ChatApp";
+import { VideoCall } from "../../features/webrtc_demo/VideoCall";
 export const PlayGround = () => {
   const frontendDesignsRef = useRef(null);
   const executeScroll = (ref) => {
@@ -75,6 +76,9 @@ export const PlayGround = () => {
       </section>
       <section className="mt-32">
         <ChatApp />
+      </section>
+      <section className="mt-32 mb-20">
+        <VideoCall />
       </section>
     </AnimatedPage>
   );

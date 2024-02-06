@@ -10,7 +10,7 @@ export const UsernameForm = ({ userNameSet, setUserNameSet, updateUser }) => {
         type="text"
         className="flex-grow p-2 border rounded-md mr-2"
         name="username"
-        placeholder="Type your message..."
+        placeholder="Type your username..."
         value={userNameSet}
         onChange={(e) => setUserNameSet(e.target.value)}
       />
